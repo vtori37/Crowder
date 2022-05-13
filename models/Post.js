@@ -26,6 +26,14 @@ Post.init({
       model: 'user',
       key: 'id'
     }
+  },
+  forum_id: {
+    type: DataTypes.INTEGER,
+    allowNull: false,
+    references: {
+      mode: 'forums',
+      key: 'id'
+    }
   }
 },
 {
