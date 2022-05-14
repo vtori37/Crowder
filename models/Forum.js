@@ -26,11 +26,11 @@ Forum.init({
       key: 'id'
     }
   },
-  forum_post_comments: {
+  forum_comments: {
     type: DataTypes.STRING,
     allowNull: true,
     references: {
-      model: 'post',
+      model: 'comment',
       key: 'id'
     }
   }
