@@ -18,7 +18,7 @@ app.use(express.urlencoded({ extended: false }));
 // app.use(routes);
 
 // sync sequelize models to the db, initiate server
-sequelize.sync({ focrce: false }).then(() => {
+sequelize.sync({ force: false }).then(() => {
   app.listen(PORT, () => {
     console.log(`  ==========================================
   Crowder database initialized on PORT ${PORT}
