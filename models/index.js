@@ -2,6 +2,8 @@ const User = require('./User');
 const Post = require('./Post');
 const Comment = require('./Comment');
 const Reaction = require('./Reaction');
+const Forum = require('./Forum');
+const Event = require('./Event');
 
 // associations 
 User.hasMany(Post, {
