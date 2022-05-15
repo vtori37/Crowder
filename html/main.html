@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,29 +9,29 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <title>Crowder</title>
 </head>
-<body>
 
-   <header>
-      <h1>
-        <a href="/">Crowder</a>
-      </h1>
-    
+<body class="text-blue-600">
+
+  <header>
+    <h1>
+      <a href="/">Crowder</a>
+    </h1>
+
     <nav>
-      <a href="'/dashboard">Dashboard</a>
+      <a href="./dashboard">Dashboard</a>
       <button id="logout" class="">Logout</button>
       <button id="login" class="">Login</button>
     </nav>
 
-    </header>
+  </header>
+  <main>
+    {{{ body }}}
+  </main>
 
-    <main>
-      {{{ body }}}
-    </main>
+  <footer>
 
-    <footer>
-      
-    </footer>
-  
+  </footer>
+
 </body>
-</html>
 
+</html>
