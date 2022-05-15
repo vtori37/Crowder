@@ -18,19 +18,19 @@ Forum.init({
       contains: 'Forum'
     }
   },
-  forum_posts: {
-    type: DataTypes.STRING,
-    allowNull: true,
+  user_id: {
+    type: DataTypes.INTEGER,
+    allowNull: false,
     references: {
-      model: 'forum',
+      modeul: 'user',
       key: 'id'
     }
   },
-  forum_comments: {
-    type: DataTypes.STRING,
-    allowNull: true,
+  event_id: {
+    type: DataTypes.INTEGER,
+    allowNull: false,
     references: {
-      model: 'comment',
+      model: 'event',
       key: 'id'
     }
   }

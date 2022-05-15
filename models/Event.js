@@ -27,18 +27,12 @@ Event.init({
     }
   },
   event_start: {
-    type: DataTypes.DATE,
-    allowNull: false,
-    validate: {
-      isDate: true
-    }
+    type: DataTypes.STRING,
+    allowNull: false
   },
   event_end: {
-    type: DataTypes.DATE,
-    allowNull: false,
-    validate: {
-      isDate: true
-    }
+    type: DataTypes.STRING,
+    allowNull: false
   },
   event_image: {
     type: DataTypes.STRING,
@@ -48,14 +42,16 @@ Event.init({
       isUrl: true
     }
   },
-  forum_id: {
-    type: DataTypes.INTEGER,
-    allowNull: false,
-    references: {
-      model: 'forum',
-      key: 'id'
-    }
+  event_code: {
+    type: DataTypes.UUID,
+    defaultValue: DataTypes.UUIDV4
   }
+},
+{
+  sequelize,
+  freezeTableName: true,
+  underscored: true,
+  tableName: 'event'
 });
 
 module.exports = Event;

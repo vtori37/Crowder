@@ -2,7 +2,7 @@ const { User } = require('../models');
 const { faker } = require('@faker-js/faker');
 
 randomUser = () => {
-  return faker.name.userName();
+  return faker.name.firstName();
 }
 
 randomEmail = () => {
@@ -80,7 +80,7 @@ userData = [
     biography: ``,
     twitter: ``
   }
-]
+];
 
 const seedUsers = () => User.bulkCreate(userData);
 

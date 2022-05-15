@@ -27,11 +27,11 @@ Post.init({
       key: 'id'
     }
   },
-  forum_id: {
+  event_id: {
     type: DataTypes.INTEGER,
     allowNull: false,
     references: {
-      mode: 'forums',
+      model: 'event',
       key: 'id'
     }
   }
