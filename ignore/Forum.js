@@ -1,29 +1,28 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
-class Post extends Model {};
+class Forum extends Model {};
 
-// initiate Post db model
-Post.init({
+// initiatize Forum db model
+Forum.init({
   id: {
     type: DataTypes.INTEGER,
     autoIncrement: true,
     allowNull: false,
     primaryKey: true
   },
-  title: {
+  forum_title: {
     type: DataTypes.STRING,
     allowNull: false,
-  },
-  post_text: {
-    type: DataTypes.STRING,
-    allowNull: false,
+    validate: {
+      contains: 'Forum'
+    }
   },
   user_id: {
     type: DataTypes.INTEGER,
     allowNull: false,
     references: {
-      model: 'user',
+      modeul: 'user',
       key: 'id'
     }
   },
@@ -40,7 +39,7 @@ Post.init({
   sequelize,
   freezeTableName: true,
   underscored: true,
-  modelName: 'post'
+  modelName: 'forum'
 });
 
-module.exports = Post;
+module.exports = Forum;
