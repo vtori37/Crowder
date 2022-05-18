@@ -39,14 +39,14 @@ User.init({
   },
   // IF we make a profile page these model properties will come in handy 
   biography: {
-    type: DataTypes.STRING(1234),
+    type: DataTypes.STRING(),
     allowNull: true,
   },
   twitter: {
     type: DataTypes.STRING,
     allowNull: true,
-    // each twitter linked must be unique
-    unique: true,
+    // each twitter linked must be unique if we include
+    // unique: true,
     contains: 'twitter'
   }
 },
