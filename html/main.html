@@ -8,30 +8,81 @@
   , initial-scale=1.0">
   <script src="https://cdn.tailwindcss.com"></script>
   <title>Crowder</title>
+  <style>
+    .body-bg {
+      background-color: #9921e8;
+    }
+  </style>
 </head>
 
-<body class="text-blue-600">
-
+<body class="body-bg min-h-screen pt-12 md:pt-20 pb-6 px-2 md:px-0" style="font-family:'Lato',sans-serif;">
+  <!-- BEGIN HEADER -->
   <header>
-    <h1>
-      <a href="/">Crowder</a>
-    </h1>
 
-    <nav>
-      <a href="./dashboard">Dashboard</a>
-      <button id="logout" class="">Logout</button>
-      <button id="login" class="">Login</button>
-    </nav>
+
 
   </header>
+  <!-- END HEADER -->
+  <!-- BEGIN MAIN -->
   <main>
-    {{{ body }}}
-  </main>
+    <div class="grid md:grid-cols-2 gap-10">
+      <div class="relative mt-4 bg-white shadow-md sm:rounded-lg text-left">
+        <div class="py-6 px-8">
+          <img
+            src="https://images.pexels.com/photos/3321793/pexels-photo-3321793.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1/"
+            alt="">
+        </div>
+      </div>
 
-  <footer>
+
+      <div class="relative py-3 sm:max-w-xl mx-auto text-center">
+        <span class="text-2xl text-white font-light">SIGN UP</span>
+        <div class="relative mt-4 bg-white shadow-md sm:rounded-lg text-left">
+          <div class="h-2 bg-indigo-400 rounded-t-md"></div>
+          <div class="py-6 px-8">
+            <label class="block font-semibold">Username<label>
+                <input type="text" placeholder="Username"
+                  class=" border w-full h-5 px-3 py-5 mt-2 hover:outline-none focus:outline-none focus:ring-1 focus:ring-indigo-600 rounded-md">
+                <label class="block mt-3 font-semibold">Email<label>
+                    <input type="text" placeholder="Email"
+                      class=" border w-full h-5 px-3 py-5 mt-2 hover:outline-none focus:outline-none focus:ring-1 focus:ring-indigo-600 rounded-md">
+                    <label class="block mt-3 font-semibold">Password<label>
+                        <input type="password" placeholder="Password"
+                          class=" border w-full h-5 px-3 py-5 mt-2 hover:outline-none focus:outline-none focus:ring-1 focus:ring-indigo-600 rounded-md">
+                        <div class="flex justify-between items-baseline">
+                          <button class="mt-4 bg-indigo-500 text-white py-2 px-6 rounded-lg">Sign up</button>
+                        </div>
+          </div>
+        </div>
+        <span class="text-2xl text-white font-light">Login</span>
+        <div class="relative mt-4 bg-white shadow-md sm:rounded-lg text-left">
+          <div class="h-2 bg-indigo-400 rounded-t-md"></div>
+          <div class="py-6 px-8">
+            <label class="block font-semibold">Username or Email<label>
+                <input type="text" placeholder="Username"
+                  class=" border w-full h-5 px-3 py-5 mt-2 hover:outline-none focus:outline-none focus:ring-1 focus:ring-indigo-600 rounded-md">
+                <label class="block mt-3 font-semibold">Password<label>
+                    <input type="password" placeholder="Password"
+                      class=" border w-full h-5 px-3 py-5 mt-2 hover:outline-none focus:outline-none focus:ring-1 focus:ring-indigo-600 rounded-md">
+                    <div class="flex justify-between items-baseline">
+                      <button class="mt-4 bg-indigo-500 text-white py-2 px-6 rounded-lg">Login</button>
+                    </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <!-- END MAIN -->
+
+  <!-- BEGIN FOOTER -->
+  <footer class="">
 
   </footer>
+  <!-- END FOOTER -->
 
+  <!-- BEGIN SCRIPTS -->
+  <script src="./assets/js/mainScript.js"></script>
+  <!-- END SCRIPTS -->
 </body>
 
 </html>
