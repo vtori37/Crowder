@@ -5,6 +5,10 @@ const { Post, Event } = require('../../models')
 router.get('/', (req, res) => {
   Event.findAll({
     attributes: ['id', 'event_title', 'event_summary', 'event_url', 'event_start', 'event_end', 'event_code'],
+    include: [{
+      model: Post,
+      attributes: ['id', 'title', 'post_text', 'user_id']
+    }]
   })
   .then(dbEventData => {
     res.json(dbEventData)
