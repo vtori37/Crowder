@@ -10,8 +10,8 @@ const forumRoutes = require('./Forum_routes');
 router.use('/users', userRoutes);
 router.use('/posts', postRoutes);
 router.use('/comments', commentRoutes);
-router.use('/reactions', reactionRoutes);
-router.use('/events', eventRoutes);
-router.use('/forum', forumRoutes);
+//router.use('/reactions', reactionRoutes);
+//router.use('/events', eventRoutes);
+//router.use('/forum', forumRoutes);
 
 module.exports = router;

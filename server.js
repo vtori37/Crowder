@@ -15,7 +15,8 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
 // eventually connect routes to server
-// app.use(routes);
+ app.use(routes);
+
 
 // sync sequelize models to the db, initiate server
 sequelize.sync({ focrce: false }).then(() => {
