@@ -1,36 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=
   , initial-scale=1.0">
   <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="../../public/stylesheet/style.css">
   <title>Crowder</title>
 </head>
-<body>
 
-   <header>
+<body class="body-bg min-h-screen pt-12 md:pt-20 pb-6 px-2 md:px-0" style="font-family:'Lato',sans-serif;">
+
+    <!-- BEGIN HEADER -->
+  <header>
       <h1>
         <a href="/">Crowder</a>
       </h1>
-    
     <nav>
       <a href="'/dashboard">Dashboard</a>
       <button id="logout" class="">Logout</button>
       <button id="login" class="">Login</button>
     </nav>
+     </header>
+  <!-- END HEADER -->
 
-    </header>
-
+  <!-- BEGIN MAIN -->
     <main>
-      {{{ body }}}
-    </main>
+      {{{ body }}}   
+  </main>
+  <!-- END MAIN -->
 
-    <footer>
-      
-    </footer>
-  <script></script>
+  <!-- BEGIN FOOTER -->
+  <footer class="">
+
+  </footer>
+  <!-- END FOOTER -->
+
+  <!-- BEGIN SCRIPTS -->
+  <script src="./assets/js/mainScript.js"></script>
+  <!-- END SCRIPTS -->
 </body>
-</html>
 
+</html>
