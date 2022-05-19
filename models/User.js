@@ -48,6 +48,13 @@ User.init({
     // each twitter linked must be unique if we include
     // unique: true,
     contains: 'twitter'
+  },
+  user_img: {
+    type: DataTypes.STRING,
+    allowNull: true,
+    validate: {
+      isUrl: true
+    }
   }
 },
 {
