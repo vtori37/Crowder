@@ -50,7 +50,7 @@
 
 {{> post-content post}}
 
-{{#if loggedIn}}
+{{!-- {{#if loggedIn}} --}}
 <form class="comment-form">
   <div>
     <textarea name="comment-content" placeholder="Type something..."></textarea>
@@ -60,13 +60,13 @@
     <button type="submit" class="text-xl hover:text-purple-500 duration-500 ">Post comment</button>
   </div>
 </form>
-{{/if}}
+{{!-- {{/if}} --}}
 
 {{> comments post.comments}}
 
-{{#if loggedIn}}
+{{!-- {{#if loggedIn}} --}}
 <script src="/javascript/comment.js"></script>
-{{/if}}
+{{!-- {{/if}} --}}
 
 
 <section>
@@ -104,10 +104,10 @@
                     {{> post-content post}}
                     <a href="/dashboard/edit/{{post.id}}" class="edit-link">Edit post</a>
                   </li>
-                  {{/each}}
+                  {{!-- {{/each}} --}}
                 </ol>
               </section>
-              {{/if}}
+              {{!-- {{/if}} --}}
       </div>
       </div>
     </div>
