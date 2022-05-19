@@ -9,76 +9,90 @@ randomEmail = () => {
   return faker.internet.email();
 }
 
+randomImg = () => {
+  return faker.image.avatar();
+}
+
 userData = [
   {
     username: `${randomUser()}`,
     email: `${randomEmail()}`,
     password: `password`,
     biography: ``,
-    twitter: ``
+    twitter: ``,
+    user_img: `${randomImg()}`
   },
   {
     username: `${randomUser()}`,
     email: `${randomEmail()}`,
     password: `password`,
     biography: ``,
-    twitter: ``
+    twitter: ``,
+    user_img: `${randomImg()}`
   },
   {
     username: `${randomUser()}`,
     email: `${randomEmail()}`,
     password: `password`,
     biography: ``,
-    twitter: ``
+    twitter: ``,
+    user_img: `${randomImg()}`
   },
   {
     username: `${randomUser()}`,
     email: `${randomEmail()}`,
     password: `password`,
     biography: ``,
-    twitter: ``
+    twitter: ``,
+    user_img: `${randomImg()}`
   },
   {
     username: `${randomUser()}`,
     email: `${randomEmail()}`,
     password: `password`,
     biography: ``,
-    twitter: ``
+    twitter: ``,
+    user_img: `${randomImg()}`
   },
   {
     username: `${randomUser()}`,
     email: `${randomEmail()}`,
     password: `password`,
     biography: ``,
-    twitter: ``
+    twitter: ``,
+    user_img: `${randomImg()}`
   },
   {
     username: `${randomUser()}`,
     email: `${randomEmail()}`,
     password: `password`,
     biography: ``,
-    twitter: ``
+    twitter: ``,
+    user_img: `${randomImg()}`
   },
   {
     username: `${randomUser()}`,
     email: `${randomEmail()}`,
     password: `password`,
     biography: ``,
-    twitter: ``
+    twitter: ``,
+    user_img: `${randomImg()}`
   },
   {
     username: `${randomUser()}`,
     email: `${randomEmail()}`,
     password: `password`,
     biography: ``,
-    twitter: ``
+    twitter: ``,
+    user_img: `${randomImg()}`
   },
   {
     username: `${randomUser()}`,
     email: `${randomEmail()}`,
     password: `password`,
     biography: ``,
-    twitter: ``
+    twitter: ``,
+    user_img: `${randomImg()}`
   }
 ];
 
