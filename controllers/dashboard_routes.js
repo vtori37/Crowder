@@ -41,9 +41,4 @@ router.get('/:id', (req, res) => {
   }))
 });
 
-// create a post
-
-
-
-
 module.exports = router;
