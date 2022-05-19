@@ -24,16 +24,17 @@
       <div class="flex justify-between items-center">
         <span class="text-2xl font-serif cursor-pointer">
           <img class="h-10 inline"
-          src="https://st2.depositphotos.com/53723942/49047/v/380/depositphotos_490473196-stock-illustration-letter-wings-gradient-logo-vector.jpg?forcejpeg=true">
+            src="https://st2.depositphotos.com/53723942/49047/v/380/depositphotos_490473196-stock-illustration-letter-wings-gradient-logo-vector.jpg?forcejpeg=true">
           Crowder
         </span>
-  
+
         <span class="text-3xl cursor-pointer mx-2 md:hidden block">
           <ion-icon name="menu" onclick="Menu(this)"></ion-icon>
         </span>
       </div>
-      
-      <ul class="md:flex md:items-center z-[-1] md:z-auto md:static absolute bg-white w-full right-0 md:w-auto md:py-0 py-4 md:pl-0 pl-7 md:opacity-100 opacity-0 top-[-400px] transition-all ease-in duration-500">
+
+      <ul
+        class="md:flex md:items-center z-[-1] md:z-auto md:static absolute bg-white w-full right-0 md:w-auto md:py-0 py-4 md:pl-0 pl-7 md:opacity-100 opacity-0 top-[-400px] transition-all ease-in duration-500">
         <li class="mx-4">
           <a href="./main.html" class="text-xl hover:text-purple-500 duration-500 ">Home</a>
         </li>
@@ -45,7 +46,7 @@
         </li>
       </ul>
     </nav>
-  
+
   </header>
   <!-- END HEADER -->
   <!-- BEGIN MAIN -->
@@ -53,50 +54,56 @@
     <div class="w-full relative">
       <div class="w-full h-full"></div>
       <div class="w-full h-full flex flex-col absolute top-0 left-0 justify-center items-center z-30">
-        <div class="text-6xl font-bold text-white">You're next big event awaits</div>
-        <div class="text-2xl text-white">Find and meet new friends.</div>
+        <div class="md:text-6xl font-bold text-white">You're next big event awaits</div>
+        <div class="md:text-2xl text-white">Find and meet new friends.</div>
       </div>
       <img src="https://picsum.photos/id/390/2750/800" />
     </div>
 
-    
-      <div class="grid md:grid-cols-1">
-        <div class="relative py-3 sm:max-w-6xl mx-auto">
-          <div class="relative mt-4 bg-white shadow-md sm:rounded-lg text-left">
-            <div class="h-2 bg-indigo-400 rounded-t-md"></div>
-            <div class="py-6 px-8">
-              <p class="font-style: italic hover: text-center text-xl">"Find new friends" is our slogan, and Crowder delivers on this promise. It connects you with others who enjoy your interests by letting you search for events on your own terms. You have the power on Crowder. Start your own new groups or events and communicate with people who have the same interests as you. <br><br> Connecting with new people can help you get a lot more out of life. You'll have a larger support network that can appreciate your trials and victories. Additionally, if your hobbies include staying in shape or eating well, surrounding yourself with others who want to do the same is a great motivator.</p>
-            </div>
+
+    <div class="grid md:grid-cols-1">
+      <div class="relative py-3 sm:max-w-6xl mx-auto">
+        <div class="relative mt-4 bg-white shadow-md sm:rounded-lg text-left">
+          <div class="h-2 bg-indigo-400 rounded-t-md"></div>
+          <div class="py-6 px-8">
+            <p class="font-style: italic hover: text-center text-xl">"Find new friends" is our slogan, and Crowder
+              delivers on this promise. It connects you with others who enjoy your interests by letting you search for
+              events on your own terms. You have the power on Crowder. Start your own new groups or events and
+              communicate with people who have the same interests as you. <br><br> Connecting with new people can help
+              you get a lot more out of life. You'll have a larger support network that can appreciate your trials and
+              victories. Additionally, if your hobbies include staying in shape or eating well, surrounding yourself
+              with others who want to do the same is a great motivator.</p>
           </div>
-        </div> 
+        </div>
       </div>
-    
+    </div>
+
 
   </main>
   <!-- END MAIN -->
-  
+
   <!-- BEGIN FOOTER -->
   <footer class="p-5 border-2 border-indigo-600 bg-white shadow md:flex md:items-center md:justify-between">
     <div class="flex justify-between items-center">
       <span class="text-2xl font-serif cursor-pointer">
         <img class="h-10 inline"
-        src="https://st2.depositphotos.com/53723942/49047/v/380/depositphotos_490473196-stock-illustration-letter-wings-gradient-logo-vector.jpg?forcejpeg=true">
+          src="https://st2.depositphotos.com/53723942/49047/v/380/depositphotos_490473196-stock-illustration-letter-wings-gradient-logo-vector.jpg?forcejpeg=true">
         Crowder
       </span>
     </div>
-  </footer>   
-<!-- END FOOTER -->
+  </footer>
+  <!-- END FOOTER -->
 
-<!-- BEGIN SCRIPTS -->
-<script src="./assets/js/mainScript.js"></script>
-<script>
-  function Menu(e){
+  <!-- BEGIN SCRIPTS -->
+  <script src="./assets/javascripts/script.js"></script>
+  <script>
+    function Menu(e) {
       let list = document.querySelector('ul');
 
-      e.name === 'menu' ? (e.name = "close",list.classList.add('top-[80px]') , list.classList.add('opacity-100')) :(e.name = "menu" ,list.classList.remove('top-[80px]'),list.classList.remove('opacity-100')) 
-  }
-</script>
-<!-- END SCRIPTS -->
+      e.name === 'menu' ? (e.name = "close", list.classList.add('top-[80px]'), list.classList.add('opacity-100')) : (e.name = "menu", list.classList.remove('top-[80px]'), list.classList.remove('opacity-100'))
+    }
+  </script>
+  <!-- END SCRIPTS -->
 </body>
 
 </html>
