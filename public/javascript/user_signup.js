@@ -1,3 +1,5 @@
+const { header } = require("express/lib/request");
+
 const signupFormHandler = async (event) => {
   event.preventDefault();
 
@@ -7,7 +9,16 @@ const signupFormHandler = async (event) => {
 
   if (username && email && password) {
     const response = await fetch('api/users', {
-      
+      method: 'post',
+      body: JSON.stringify({ username, email, password }),
+      headers: {'Content-Type': 'application/json'}
     })
   }
+  if (response.ok) {
+    console.log("Sigup Successful!");
+  } else {
+    alert('Failed to signup. Try again.');
+  }
 }
+
+document.querySelector('.signup-form').addEventListener('submit', signupFormHandler);
