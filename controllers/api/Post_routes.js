@@ -1,6 +1,5 @@
 const router = require('express').Router();
 const { Post, User, Comment, Event } = require('../../models');
-// const sequelize = require('../../config/connection');
 //const withAuth = require('../../utils/auth');
 
 // get all posts
@@ -14,7 +13,6 @@ router.get('/', (req, res) => {
       'user_id',
       'event_id',
       'created_at',
-      // [sequelize.literal('(SELECT COUNT(*) FROM reaction WHERE post.id = reaction.post_id)'), 'reaction_count']
     ],
     include: [
       {
@@ -54,7 +52,6 @@ router.get('/:id', (req, res) => {
       'user_id',
       'event_id',
       'created_at',
-      // [sequelize.literal('(SELECT COUNT(*) FROM vote WHERE post.id = vote.post_id)'), 'vote_count']
     ],
     include: [
       {
@@ -146,17 +143,5 @@ router.delete('/:id', (req, res) => {
       res.status(500).json(err);
     });
 });
-
-//router.put('/upvote', withAuth, (req, res) => {
-  // custom static method created in models/Post.js
-  //Post.upvote({ ...req.body, user_id: req.session.user_id }, { Vote, Comment, User })
-   // .then(updatedVoteData => res.json(updatedVoteData))
-    //.catch(err => {
-      //console.log(err);
-      //res.status(500).json(err);
-    //});
-//});
-
-
 
 module.exports = router;
