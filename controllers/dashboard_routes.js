@@ -1,20 +1,24 @@
 const router = require('express').Router();
 const sequelize = require('../config/connection');
-const { User, Post, Comment, Event } = require('../models');
+const { User, Post, Event } = require('../models');
 
 // dashboard attributed to user id
 router.get('/:id', (req, res) => {
+  const renderData = [];
   // get user info
   User.findOne({
     where: {id: req.params.id},
-    attributes: ['username', 'email', 'biography', 'twitter'] // add random img
+    attributes: ['username', 'email', 'biography', 'twitter', 'user_img'] // add random img
   })
   .then(dbUserData => {
-    // wait for dasboard hbs
-    console.log(dbUserData);
-  });
-  // get posts
-  Post.findAll({
+    const { dataValues: user } = dbUserData;
+    renderData.push(user)
+  })
+  // then get posts
+  .then(Post.findAll({
+    where: {
+      user_id: req.params.id
+    },
     attributes: ['id', 'title', 'post_text', 'user_id', 'event_id', 'created_at'],
     include: {
       model: User,
@@ -22,22 +26,20 @@ router.get('/:id', (req, res) => {
     }
   })
   .then(dbPostData => {
-    // wait for dasboard hbs
-    console.log(dbPostData)
-
-  });
-  // get events
+    const posts = dbPostData.map(posts => posts.get({plain:true}))
+    renderData.push(posts)
+  }))
+  // then get events
+  .then(
   Event.findAll({
     attributes: ['id', 'event_title', 'event_summary', 'event_url', 'event_start', 'event_end', 'event_image', 'event_code']
   })
   .then(dbEventData => {
-    // wait for dasboard hbs
-    console.log(dbEventData);
-  });
+    const events = dbEventData.map(events => events.get({plain:true}));
+    renderData.push(events)
+    res.render('user_dashboard', { renderData });
+  }))
 });
-
-// edit posts
-
 
 // create a post
 

@@ -4,6 +4,9 @@ const path = require('path');
 const sequelize = require('./config/connection');
 const express = require('express');
 const routes = require('./controllers');
+const exphbs = require('express-handlebars');
+const hbs = exphbs.create(); // add { helpers }
+
 
 // initialize express server
 const app = express();
@@ -13,18 +16,9 @@ const PORT = process.env.PORT || 3001;
 // middleware
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
-
-
+app.use(express.static(path.join(__dirname, '/public')));
+app.engine('handlebars', hbs.engine);
 app.set('view engine', 'handlebars');
-app.engine('handlebars', handlebars({
-  layoutsDir: `$(__dirname)/views/layouts`
-}));
-// app.engine('handlebars', hbs.engine);
-app.use(express.static(`public`));
-
-app.use(express.json());
-app.use(express.urlencoded({ extended: true }));
-
 
 // eventually connect routes to server and turns on routes
 app.use(routes);
