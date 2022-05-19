@@ -51,97 +51,152 @@
   <!-- END HEADER -->
   <!-- BEGIN MAIN -->
   <main class="flex-grow">
-    <div>
-      <div class="flex items-center justify-center">
-        <div class="bg-white w-3/12 mt-10 rounded-lg">
-          <div class="h-2 bg-indigo-400 rounded-t-md"></div>
-          <div class="flex items-center justify-center pt-10 flex-col">
-            <img class="rounded-full w-32"
-              src="https://i.pinimg.com/236x/83/2a/46/832a460b522c84fa9650c11face5927e--headshot-photography-professional-portrait.jpg">
-            <h1 class="text-gray-800 font-semibold text-2xl mt-5">Maria Ramos</h1>
-            <h1 class="text-blue-500 text- p-4">@Maria_Ramos</h1>
-            <h1 class="text-gray-500 text-sm p-4 text-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-              sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</h1>
-          </div>
-          <div class="flex items-center justify-center mt-3 mb-6 flex-col">
-            <h1 class="text-base font-semibold">Get Connected</h1>
-            <div class="flex mt-2">
-              <img src="/public/images/facebook-16.png" alt="" class="w-6 border-2 p-1 rounded-full mr-3">
-              <img src="/public/images/linkedin-3-16.png" alt="" class="w-6 border-2 p-1 rounded-full mr-3">
-              <img src="/public/images/twitter-16.png" alt="" class="w-6 border-2 p-1 rounded-full mr-3">
-              <img src="/public/images/instagram-16.png" alt="" class="w-6 border-2 p-1 rounded-full mr-3">
-            </div>
-          </div>
-        </div>
+    <section class="md:flex items-center justify-evenly pt-10">
 
-        <div class="flex items-center justify-center">
-          <div class="bg-white w-8/12 mt-10 rounded-lg">
+        <aside class="flex">
+            <div class="bg-white w-96 ml-1 mt-16 rounded-lg">
+              <div class="h-2 bg-indigo-400 rounded-t-md"></div>
+              <div class="flex items-center justify-center pt-10 pb-4 flex-col">
+                <img 
+                  class="rounded-full w-32"
+                  src="https://i.pinimg.com/236x/83/2a/46/832a460b522c84fa9650c11face5927e--headshot-photography-professional-portrait.jpg" >
+                <h1 class="text-gray-800 font-semibold text-3xl mt-5">Maria Ramos</h1>
+                <h1 class="text-blue-500 text-lg p-4">@Maria_Ramos</h1>
+                <h1 class="text-gray-500 p-4 text-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</h1>
+              </div>
+                <div class="flex items-center justify-center mt-3 mb-6 flex-col">
+                  <h1 class="text-base font-semibold">Get Connected</h1>
+                  <div class="flex mt-5">
+                    <img 
+                      src="/public/images/facebook-16.png"
+                      alt=""
+                      class="w-6 border-2 p-1 mx-3 rounded-full">
+                    <img 
+                      src="/public/images/linkedin-3-16.png"
+                      alt=""
+                      class="w-6 border-2 p-1 mx-3 rounded-full">
+                    <img 
+                      src="/public/images/twitter-16.png"
+                      alt=""
+                      class="w-6 border-2 p-1 mx-3 rounded-full">
+                    <img 
+                      src="/public/images/instagram-16.png"
+                      alt=""
+                      class="w-6 border-2 p-1 mx-3 rounded-full">
+                  </div>
+                </div>    
+            </div>
+            </aside>
+    
+        <article class="">
+          <div class="items-center justify-center">
+            <div class="bg-white h-70 mt-10 rounded-lg">
+              <div class="h-2 bg-indigo-400 rounded-t-md"></div>
+              <div class="flex items-center flex-col">
+                <h1 class="font-bold mt- pb-2 border-b border-gray-200 text-5xl">Upcoming Events</h4>
+              </div>
+              <div class="md:flex items-center pt-2 pb-6 p-3">
+                  <card class="mt-4 p-3 w-80">
+                    <div class="bg-white rounded overflow-hidden shadow-md">
+                      <span class="font-bold text-xl">Event Name</span>
+                      <img src="https://webassets.inman.com/wp-content/uploads/2019/10/Untitled-design-2019-10-29T153346.079.jpg" alt="">
+                      <div>
+                        <span class="block pt-2 text-center text-gray-600 text-sm">Summary</span>
+                        <button class="bg-blue-400 px-2 border-2 text-white rounded container">Join Group</button>
+                      </div>
+                    </div>
+                  </card>
+                  <card class="mt-4 p-3 w-80">
+                    <div class="bg-white rounded overflow-hidden shadow-md">
+                      <span class="font-bold text-xl">Event Name</span>
+                      <img src="https://webassets.inman.com/wp-content/uploads/2019/10/Untitled-design-2019-10-29T153346.079.jpg" alt="">
+                      <div>
+                        <span class="block pt-2 text-center text-gray-600 text-sm">Summary</span>
+                        <button class="bg-blue-400 px-2 border-2 text-white rounded container">Join Group</button>
+                      </div>
+                    </div>
+                  </card>
+                  <card class="mt-4 p-3 w-80">
+                    <div class="bg-white rounded overflow-hidden shadow-md">
+                      <span class="font-bold text-xl">Event Name</span>
+                      <img src="https://webassets.inman.com/wp-content/uploads/2019/10/Untitled-design-2019-10-29T153346.079.jpg" alt="">
+                      <div>
+                        <span class="block pt-2 text-center text-gray-600 text-sm">Summary</span>
+                        <button class="bg-blue-400 px-2 border-2 text-white rounded container">Join Group</button>
+                      </div>
+                    </div>
+                  </card>
+                  <card class="mt-4 p-3 w-80">
+                    <div class="bg-white rounded overflow-hidden shadow-md">
+                      <span class="font-bold text-xl">Event Name</span>
+                      <img src="https://webassets.inman.com/wp-content/uploads/2019/10/Untitled-design-2019-10-29T153346.079.jpg" alt="">
+                      <div>
+                        <span class="block pt-2 text-center text-gray-600 text-sm">Summary</span>
+                        <button class="bg-blue-400 px-2 border-2 text-white rounded container">Join Group</button>
+                      </div>
+                    </div>
+                  </card>
+                  <card class="mt-4 p-3 w-80">
+                    <div class="bg-white rounded overflow-hidden shadow-md">
+                      <span class="font-bold text-xl">Event Name</span>
+                      <img src="https://webassets.inman.com/wp-content/uploads/2019/10/Untitled-design-2019-10-29T153346.079.jpg" alt="">
+                      <div>
+                        <span class="block pt-2 text-center text-gray-600 text-sm">Summary</span>
+                        <button class="bg-blue-400 px-2 border-2 text-white rounded container">Join Group</button>
+                      </div>
+                    </div>
+                  </card>
+              </div>
+            </div>    
+          </div>
+        </article>
+      </section>
+
+      <article class="">
+        <div class="items-center justify-center">
+          <div class="bg-white h-70 mt-10 rounded-lg">
             <div class="h-2 bg-indigo-400 rounded-t-md"></div>
             <div class="flex items-center flex-col">
-              <h1 class="font-bold mt- pb-2 border-b border-gray-200 text-5xl">Upcoming Events</h4>
+              <h1 class="font-bold mt- pb-2 border-b border-gray-200 text-5xl">My Post</h4>
             </div>
-            <div class="flex items-center pt-2 pb-6 p-3">
-              <card class="mt-4 p-3 w-80">
-                <div class="bg-white rounded overflow-hidden shadow-md">
-                  <img
-                    src="https://webassets.inman.com/wp-content/uploads/2019/10/Untitled-design-2019-10-29T153346.079.jpg"
-                    alt="">
-                  <div class="">
-                    <span class="font-bold text-lg">Event Name</span>
-                    <span class="block text-gray-500 text-sm">Location</span>
-                  </div>
+            <div class="md:flex items-center pt-2 pb-8 p-3">
+              <card class="px-3 max-w-sm">
+                <div class="flex text-2xl">
+                <span>Posted to:</span>
+                <p class="font-bold">"Event"</p>
                 </div>
+                <p class="text-blue-500 text-lg">@Maria_Ramos</p>
+                <p class="text-gray-500 ">"Hey everyone I was looking for a place to grab some food. Do y'all know if there is anything close to the event"</p>
               </card>
-              <card class="mt-4 p-3 w-80">
-                <div class="bg-white rounded overflow-hidden shadow-md">
-                  <img
-                    src="https://webassets.inman.com/wp-content/uploads/2019/10/Untitled-design-2019-10-29T153346.079.jpg"
-                    alt="">
-                  <div class="">
-                    <span class="font-bold text-lg">Event Name</span>
-                    <span class="block text-gray-500 text-sm">Location</span>
-                  </div>
+              <card class="px-3 max-w-sm">
+                <div class="flex text-2xl">
+                <span>Posted to:</span>
+                <p class="font-bold">"Event"</p>
                 </div>
+                <p class="text-blue-500 text-lg">@Maria_Ramos</p>
+                <p class="text-gray-500 ">"Hey everyone I was looking for a place to grab some food. Do y'all know if there is anything close to the event"</p>
               </card>
-              <card class="mt-4 p-3 w-80">
-                <div class="bg-white rounded overflow-hidden shadow-md">
-                  <img
-                    src="https://webassets.inman.com/wp-content/uploads/2019/10/Untitled-design-2019-10-29T153346.079.jpg"
-                    alt="">
-                  <div class="">
-                    <span class="font-bold text-lg">Event Name</span>
-                    <span class="block text-gray-500 text-sm">Location</span>
-                  </div>
+              <card class="px-3 max-w-sm">
+                <div class="flex text-2xl">
+                <span>Posted to:</span>
+                <p class="font-bold">"Event"</p>
                 </div>
+                <p class="text-blue-500 text-lg">@Maria_Ramos</p>
+                <p class="text-gray-500 ">"Hey everyone I was looking for a place to grab some food. Do y'all know if there is anything close to the event"</p>
               </card>
-              <card class="mt-4 p-3 w-80">
-                <div class="bg-white rounded overflow-hidden shadow-md">
-                  <img
-                    src="https://webassets.inman.com/wp-content/uploads/2019/10/Untitled-design-2019-10-29T153346.079.jpg"
-                    alt="">
-                  <div class="">
-                    <span class="font-bold text-lg">Event Name</span>
-                    <span class="block text-gray-500 text-sm">Location</span>
-                  </div>
+              <card class="px-3 max-w-sm">
+                <div class="flex text-2xl">
+                <span>Posted to:</span>
+                <p class="font-bold">"Event"</p>
                 </div>
-              </card>
-              <card class="mt-4 p-3 w-80">
-                <div class="bg-white rounded overflow-hidden shadow-md">
-                  <img
-                    src="https://webassets.inman.com/wp-content/uploads/2019/10/Untitled-design-2019-10-29T153346.079.jpg"
-                    alt="">
-                  <div class="">
-                    <span class="font-bold text-lg">Event Name</span>
-                    <span class="block text-gray-500 text-sm">Location</span>
-                  </div>
-                </div>
+                <p class="text-blue-500 text-lg">@Maria_Ramos</p>
+                <p class="text-gray-500 ">"Hey everyone I was looking for a place to grab some food. Do y'all know if there is anything close to the event"</p>
               </card>
             </div>
-          </div>
+          </div>    
         </div>
-      </div>
-    </div>
-
+      </article>
+          
   </main>
   <!-- END MAIN -->
 
