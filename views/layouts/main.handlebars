@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+  <link rel="stylesheet" href="./assets/css/style.css" />
+  <title>Crowder</title>
+</head>
+
+<body class="body-bg min-h-screen pt-12 md:pt-20 pb-6 px-2 md:px-0" style="font-family:'Lato',sans-serif;">
+
+    <!-- BEGIN HEADER -->
+  <header>
+    <nav class="p-5 border-2 border-indigo-600 bg-white shadow md:flex md:items-center md:justify-between">
+      <div class="flex justify-between items-center">
+        <span class="text-2xl font-serif cursor-pointer">
+          <img class="h-10 inline"
+            src="https://st2.depositphotos.com/53723942/49047/v/380/depositphotos_490473196-stock-illustration-letter-wings-gradient-logo-vector.jpg?forcejpeg=true">
+          Crowder
+        </span>
+
+        <span class="text-3xl cursor-pointer mx-2 md:hidden block">
+          <ion-icon name="menu" onclick="Menu(this)"></ion-icon>
+        </span>
+      </div>
+
+      <ul
+        class="md:flex md:items-center z-[-1] md:z-auto md:static absolute bg-white w-full right-0 md:w-auto md:py-0 py-4 md:pl-0 pl-7 md:opacity-100 opacity-0 top-[-400px] transition-all ease-in duration-500">
+        <li class="mx-4">
+          <a href="./main.html" class="text-xl hover:text-purple-500 duration-500 ">Home</a>
+        </li>
+        <li class="mx-4">
+          <a href="./signup.html" class="text-xl hover:text-purple-500 duration-500 ">Sign up/Login</a>
+        </li>
+        <li class="mx-4">
+          <a href="#" class="text-xl hover:text-purple-500 duration-500 ">Logout</a>
+        </li>
+      </ul>
+    </nav>
+
+  </header>
+  <!-- END HEADER -->
+
+  <!-- BEGIN MAIN -->
+    <main class="flex-grow">
+      {{{ body }}}   
+  </main>
+  <!-- END MAIN -->
+
+  <!-- BEGIN FOOTER -->
+  <footer class="">
+
+  </footer>
+  <!-- END FOOTER -->
+
+  <!-- BEGIN SCRIPTS -->
+  <script src="./assets/javascripts/script.js"></script>
+  <!-- END SCRIPTS -->
+</body>
+
+</html>
