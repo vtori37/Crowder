@@ -1,13 +1,10 @@
 # Crowder
-
 ## Description
-
-
+![Crowder](./Crowder-homepage.png)
+Crowder connects users to a group that has a shared interest in events.
 ## Table of Contents 
 * [Website](#Website)
-* [Installation](#Installation)
 * [Usage](#Usage)
-* [Test](#Test)
 * [Contributors](#contributors)
 * [Technology](#technology)
 * [License](license)
@@ -17,17 +14,10 @@
 
 ## Website
 Here is a link to the live website:
-[]()
-
-## Installation 
-To access the application
+[Crowder]()
 
 ## Usage
-This project can be used to create company profile pages.
-
-## Test
-Here is a demonstration of the application.
-
+Users should be able to set up an account and login. They can join a group for an event they will attend and create posts in that group. 
 ## Contributors
 Jamel James
 Roy Velasquez
@@ -51,5 +41,5 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 
 
 
-### Questions
-If you have any questions or concerns regarding this project, feel free to reach out to 
+<!-- ### Questions
+If you have any questions or concerns regarding this project -->
