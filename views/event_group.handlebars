@@ -1,15 +1,14 @@
-((FOR SINGLE POSTS))
-
+{{!-- for single posts --}}
 {{> post-content post}}
 
 {{#if loggedIn}}
 <form class="comment-form">
   <div>
-    <textarea name="comment-body" placeholder="Type something..."></textarea>
+    <textarea name="comment-content" placeholder="Type something..."></textarea>
   </div>
 
   <div>
-    <button type="submit">Post comment</button>
+    <button type="submit" class="text-xl hover:text-purple-500 duration-500 ">Post comment</button>
   </div>
 </form>
 {{/if}}
@@ -30,10 +29,9 @@
       <input type="text" id="post-title" name="post-title" />
     </div>
     <div>
-      <label for="post-url">Link</label>
       <input id="post-url" name="post-url" />
     </div>
-    <button type="submit" class="btn">Create</button>
+    <button type="submit" class="text-xl hover:text-purple-500 duration-500">Create</button>
   </form>
 </section>
 
@@ -43,7 +41,7 @@
   <ol>
     {{#each posts as |post|}}
     <li>
-      {{> post-info post}}
+      {{> <post-content post}}
       <a href="/dashboard/edit/{{post.id}}" class="edit-link">Edit post</a>
     </li>
     {{/each}}
