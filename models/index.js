@@ -36,5 +36,7 @@ Comment.belongsTo(Post, {
   foreignKey: 'post_id'
 });
 
+// Event
+Event.hasMany(Post)
 
 module.exports = { User, Post, Comment, Reaction, Event };
