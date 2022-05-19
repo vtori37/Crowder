@@ -28,7 +28,8 @@ Victoria Rice
 * HTML5
 * CSS 
 * JS
-
+* Tailwind
+* Handlebars
 
 ## License 
 https://opensource.org/licenses/MIT
