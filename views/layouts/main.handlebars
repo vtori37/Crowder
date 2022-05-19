@@ -30,10 +30,14 @@
       <ul
         class="md:flex md:items-center z-[-1] md:z-auto md:static absolute bg-white w-full right-0 md:w-auto md:py-0 py-4 md:pl-0 pl-7 md:opacity-100 opacity-0 top-[-400px] transition-all ease-in duration-500">
         <li class="mx-4">
-          <a href="./main.html" class="text-xl hover:text-purple-500 duration-500 ">Home</a>
+          <a href="/" class="text-xl hover:text-purple-500 duration-500 ">Home</a>
         </li>
         <li class="mx-4">
-          <a href="./signup.html" class="text-xl hover:text-purple-500 duration-500 ">Sign up/Login</a>
+          <!-- after setting up authentication, make dashboard href dynamic-->
+          <a href="/dashboard/1" class="text-xl hover:text-purple-500 duration-500 ">Dashboard</a>
+        </li>
+        <li class="mx-4">
+          <a href="/login" class="text-xl hover:text-purple-500 duration-500 ">Sign up/Login</a>
         </li>
         <li class="mx-4">
           <a href="#" class="text-xl hover:text-purple-500 duration-500 ">Logout</a>
