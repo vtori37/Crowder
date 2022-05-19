@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=
+  , initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+
+  <title>Crowder</title>
+  <style>
+    .body-bg {
+      background-color: #9921e8;
+    }
+  </style>
+</head>
+
+<body class="flex flex-col body-bg min-h-screen" style="font-family:'Lato',sans-serif;">
+  <!-- BEGIN HEADER -->
+  <header>
+    <nav class="p-5 border-2 border-indigo-600 bg-white shadow md:flex md:items-center md:justify-between">
+      <div class="flex justify-between items-center">
+        <span class="text-2xl font-serif cursor-pointer">
+          <img class="h-10 inline"
+            src="https://st2.depositphotos.com/53723942/49047/v/380/depositphotos_490473196-stock-illustration-letter-wings-gradient-logo-vector.jpg?forcejpeg=true">
+          Crowder
+        </span>
+
+        <span class="text-3xl cursor-pointer mx-2 md:hidden block">
+          <ion-icon name="menu" onclick="Menu(this)"></ion-icon>
+        </span>
+      </div>
+
+      <ul
+        class="md:flex md:items-center z-[-1] md:z-auto md:static absolute bg-white w-full right-0 md:w-auto md:py-0 py-4 md:pl-0 pl-7 md:opacity-100 opacity-0 top-[-400px] transition-all ease-in duration-500">
+        <li class="mx-4">
+          <a href="./main.html" class="text-xl hover:text-purple-500 duration-500 ">Home</a>
+        </li>
+        <li class="mx-4">
+          <a href="./event.html" class="text-xl hover:text-purple-500 duration-500 ">Events</a>
+        </li>
+        <li class="mx-4">
+          <a href="./signup.html" class="text-xl hover:text-purple-500 duration-500 ">Sign up/Login</a>
+        </li>
+        <li class="mx-4">
+          <a href="#" class="text-xl hover:text-purple-500 duration-500 ">Logout</a>
+        </li>
+      </ul>
+    </nav>
+
+  </header>
+  <!-- END HEADER -->
+  <!-- BEGIN MAIN -->
+  <main class="flex-grow">
+    <div class="w-full relative">
+      <div class="w-full h-full"></div>
+      <div class="w-full h-full flex flex-col absolute top-0 left-0 justify-center items-center z-30">
+        <div class="md:text-6xl font-bold text-white bg-black-300">Event Name</div>
+
+      </div>
+      <!-- Event Image -->
+      <img src="https://picsum.photos/id/390/2750/800" />
+    </div>
+    </div>
+
+    <div class="flex flex-inline bg-indigo-400 text-lg text-white shadow-md items-center justify-center">
+      <span>Attendies:</span>
+      <p>5</p>
+    </div>
+
+    <article class="">
+      <div class="items-center justify-center">
+        <div class="bg-white h-70 mt-10 rounded-lg">
+          <div class="h-2 bg-indigo-400 rounded-t-md"></div>
+          <div class="flex items-center flex-col">
+            <h1 class="font-bold mt- pb-2 border-b border-gray-200 text-5xl">Comments</h4>
+          </div>
+          <div class="md:flex items-center justify-center pt-3 pb-8 px-3">
+            <card class="px-3 max-w-sm">
+              <a class="text-blue-500 text-lg" href="./profile.html">@Maria_Ramos</a>
+              <p class="text-gray-500 ">"Hey everyone I was looking for a place to grab some food. Do y'all know if
+                there is anything close to the event"</p>
+            </card>
+            <card class="px-3 max-w-sm">
+              <p class="text-blue-500 text-lg">@Maria_Ramos</p>
+              <p class="text-gray-500 ">"Hey everyone I was looking for a place to grab some food. Do y'all know if
+                there is anything close to the event"</p>
+            </card>
+            <card class="px-3 max-w-sm">
+              <p class="text-blue-500 text-lg">@Maria_Ramos</p>
+              <p class="text-gray-500 ">"Hey everyone I was looking for a place to grab some food. Do y'all know if
+                there is anything close to the event"</p>
+            </card>
+            <card class="px-3 max-w-sm">
+              <p class="text-blue-500 text-lg">@Maria_Ramos</p>
+              <p class="text-gray-500 ">"Hey everyone I was looking for a place to grab some food. Do y'all know if
+                there is anything close to the event"</p>
+            </card>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <!-- 
+    <form class="comment-form">
+      <form class="comment-form">
+        <div>
+          <textarea name="comment-content" placeholder="Type something..."></textarea>
+        </div>
+
+        <div>
+          <button type="submit" class="text-xl hover:text-purple-500 duration-500 ">Post comment</button>
+        </div>
+      </form> -->
+
+
+
+    <section>
+      <div class="items-center justify-center">
+        <div class="bg-white h-70 mt-10 rounded-lg">
+          <div class="h-2 bg-indigo-400 rounded-t-md"></div>
+          <div class="flex items-center flex-col">
+            <h2>Create New Post</h2>
+
+            <form class="new-post-form">
+              <div>
+                <label for="post-title">Title</label>
+                <input type="text" id="post-title" name="post-title" />
+              </div>
+              <div>
+                <input id="post-url" name="post-url" />
+              </div>
+              <button type="submit" class="text-sm hover:text-purple-500 duration-500">Create</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- <section>
+        <div class="items-center justify-center">
+          <div class="bg-white h-70 mt-10 rounded-lg">
+            <div class="h-2 bg-indigo-400 rounded-t-md"></div>
+            <div class="flex items-center flex-col">
+              <h2>Your Posts</h2>
+              <ol>
+                <li>
+                  <p>postttt</p>
+                  <a href="/dashboard/edit/{{post.id}}" class="edit-link">Edit post</a>
+                </li>
+
+              </ol>
+      </section>
+
+      </div>
+      </div>
+      </div> -->
+
+  </main>
+
+  <!-- BEGIN FOOTER -->
+  <footer class="p-5 border-2 border-indigo-600 bg-white shadow md:flex md:items-center md:justify-between">
+    <div class="flex justify-between items-center">
+      <span class="text-2xl font-serif cursor-pointer">
+        <img class="h-10 inline"
+          src="https://st2.depositphotos.com/53723942/49047/v/380/depositphotos_490473196-stock-illustration-letter-wings-gradient-logo-vector.jpg?forcejpeg=true">
+        Crowder
+      </span>
+    </div>
+  </footer>
+  <!-- END FOOTER -->
+
+  <!-- BEGIN SCRIPTS -->
+  <script src="./assets/js/mainScript.js"></script>
+  <script src="/javascript/comment.js"></script>
+  <script>
+    function Menu(e) {
+      let list = document.querySelector('ul');
+
+      e.name === 'menu' ? (e.name = "close", list.classList.add('top-[80px]'), list.classList.add('opacity-100')) : (e.name = "menu", list.classList.remove('top-[80px]'), list.classList.remove('opacity-100'))
+    }
+  </script>
+  <!-- END SCRIPTS -->
+</body>
+
+</html>

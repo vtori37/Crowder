@@ -1,3 +1,13 @@
+# node dependencies
 node_modules/
+
+# macOS
 .DS_Store
+
+# environment variables
 .env
+
+# keeping incase we need it
+seeds/Forum.js
+seeds/forum_seeds.js
+
