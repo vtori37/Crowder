@@ -14,7 +14,7 @@ Crowder connects users to a group that has a shared interest in events.
 
 ## Website
 Here is a link to the live website:
-[Crowder]()
+[Crowder](https://vtori37.github.io/Crowder/)
 
 ## Usage
 Users should be able to set up an account and login. They can join a group for an event they will attend and create posts in that group. 
