@@ -13,7 +13,7 @@ const signupFormHandler = async (event) => {
     })
     if (response.ok) {
       console.log("Sigup Successful!");
-      document.location.replace("/dashboard")
+      document.location.replace("/dashboard");
     } else {
       alert('Failed to signup. Try again.');
     }
