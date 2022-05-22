@@ -39,4 +39,5 @@ Comment.belongsTo(Post, {
 // Event
 Event.hasMany(Post)
 
+
 module.exports = { User, Post, Comment, Reaction, Event };

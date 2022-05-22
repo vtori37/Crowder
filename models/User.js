@@ -1,9 +1,12 @@
 const { Model, DataTypes } = require('sequelize');
-const sequelize = require('../config/connection');
-// eventually hash user passwords for security
 const bcrypt = require('bcrypt');
+const sequelize = require('../config/connection');
 
-class User extends Model {};
+class User extends Model {
+  checkPassword(loginPw) {
+    return bcrypt.compareSync(loginPw, this.password);
+  }
+};
 
 // initiate User db model
 User.init({
@@ -16,10 +19,7 @@ User.init({
   username: {
     type: DataTypes.STRING,
     allowNull: false,
-    // username should be at least 6 characters
-    validate: {
-      len: [6]
-    }
+    unique: true,
   },
   email: {
     type: DataTypes.STRING,
@@ -34,7 +34,7 @@ User.init({
     allowNull: false,
     // pw must be at least 6 characters
     validate: {
-      len: [6]
+      len: [4]
     }
   },
   // IF we make a profile page these model properties will come in handy 
@@ -58,6 +58,16 @@ User.init({
   }
 },
 {
+  hooks: {
+    async beforeCreate(newUserData) {
+      newUserData.password = await bcrypt.hash(newUserData.password, 10);
+      return newUserData;
+    },
+    async beforeUpdate(updatedUserData) {
+      updatedUserData.password = await bcrypt.hash(updatedUserData.password, 10);
+      return updatedUserData;
+    }
+  },
   sequelize,
   timestamps: false,
   freezeTableName: true,

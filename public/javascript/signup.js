@@ -1,5 +1,3 @@
-const { header } = require("express/lib/request");
-
 const signupFormHandler = async (event) => {
   event.preventDefault();
 
@@ -8,17 +6,18 @@ const signupFormHandler = async (event) => {
   const password = document.querySelector('#password-signup').value.trim();
 
   if (username && email && password) {
-    const response = await fetch('api/users', {
+    const response = await fetch('/api/users', {
       method: 'post',
       body: JSON.stringify({ username, email, password }),
       headers: {'Content-Type': 'application/json'}
     })
-  }
-  if (response.ok) {
-    console.log("Sigup Successful!");
-  } else {
-    alert('Failed to signup. Try again.');
+    if (response.ok) {
+      console.log("Sigup Successful!");
+      document.location.replace("/dashboard");
+    } else {
+      alert('Failed to signup. Try again.');
+    }
   }
 }
 
-document.querySelector('.signup-form').addEventListener('submit', signupFormHandler);
+document.querySelector('.form-signup').addEventListener('submit', signupFormHandler);
