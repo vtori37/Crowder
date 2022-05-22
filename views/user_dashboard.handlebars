@@ -1,7 +1,9 @@
-    <div>
-      <div class="flex items-center justify-center">
-        <div class="bg-white w-3/12 mt-10 rounded-lg">
-          <div class="h-2 bg-indigo-400 rounded-t-md"></div>
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-4 lg:gap-0 m-5">
+
+  <article>
+    <div class="bg-white w-10/12 mt-10 rounded-lg">
+      <div class="h-2 bg-indigo-400 rounded-t-md"></div>
+      <div class="place-self-center">
           <div class="flex items-center justify-center pt-10 flex-col">
             <img class="rounded-full w-32"
               src="{{renderData.0.0.user.user_img}}">
@@ -11,86 +13,80 @@
           </div>
           <div class="flex items-center justify-center mt-3 mb-6 flex-col">
             <div class="flex mt-2">
-              <img src="../images/facebook-16.png" alt="" class="w-6 border-2 p-1 rounded-full mr-3">
-              <img src="../images/linkedin-3-16.png" alt="" class="w-6 border-2 p-1 rounded-full mr-3">
-              <img src="../images/twitter-16.png" alt="" class="w-6 border-2 p-1 rounded-full mr-3">
-              <img src="../images/instagram-16.png" alt="" class="w-6 border-2 p-1 rounded-full mr-3">
+              <img src="../images/facebook-16.png" alt="A facebook logo icon linked to user's facebook profile." class="w-6 border-2 p-1 rounded-full mr-3">
+              <img src="../images/linkedin-3-16.png" alt="A lin logo icon linked to user's lin profile." class="w-6 border-2 p-1 rounded-full mr-3">
+              <img src="../images/twitter-16.png" alt="A facebook logo icon linked to user's facebook profile." class="w-6 border-2 p-1 rounded-full mr-3">
+              <img src="../images/instagram-16.png" alt="A facebook logo icon linked to user's facebook profile." class="w-6 border-2 p-1 rounded-full mr-3">
             </div>
-          </div>
-        </div>
-      
-
-        <div class="flex items-center justify-center">
-          <div class="bg-white w-8/12 mt-10 rounded-lg">
-            <div class="h-2 bg-indigo-400 rounded-t-md"></div>
-            <div class="flex items-center flex-col">
-              <h1 class="font-bold mt- pb-2 border-b border-gray-200 text-5xl">Upcoming Events</h1>
-            </div>
-          </div>
-          
-            <div class="flex items-center pt-2 pb-6 p-3">
-              <card class="mt-4 p-3 w-80">
-                <div class="bg-white rounded overflow-hidden shadow-md">
-                  <a href="{{renderData.1.0.event_url}}" target="_blank">
-                  <img
-                    src="{{renderData.1.0.event_image}}"
-                  alt=""/></a>
-                  <div class="">
-                    <span class="font-bold text-lg">{{renderData.1.0.event_title}}</span>
-                    <span class="block text-gray-500 text-sm">{{renderData.1.0.event_start}}</span>
-                  </div>
-                </div>
-              </card>
-              <card class="mt-4 p-3 w-80">
-                <div class="bg-white rounded overflow-hidden shadow-md">
-                  <a href="{{renderData.1.1.event_url}}" target="_blank">
-                  <img
-                    src="{{renderData.1.1.event_image}}"
-                  alt=""/></a>
-                    <span class="font-bold text-lg">{{renderData.1.1.event_title}}</span>
-                    <span class="block text-gray-500 text-sm">{{renderData.1.1.event_start}}</span>
-                  </div>
-                </div>
-              </card>
-              <card class="mt-4 p-3 w-80">
-                <div class="bg-white rounded overflow-hidden shadow-md">
-                  <a href="{{renderData.1.2.event_url}}" target="_blank">
-                  <img
-                    src="{{renderData.1.2.event_image}}" alt=""/></a>
-                    <span class="font-bold text-lg">{{renderData.1.2.event_title}}</span>
-                    <span class="block text-gray-500 text-sm">{{renderData.1.2.event_start}}</span>
-                  </div>
-                </div>
-              </card>
-              <card class="mt-4 p-3 w-80">
-                <div class="bg-white rounded overflow-hidden shadow-md">
-                 <a href="{{renderData.1.3.event_url}}" target="_blank">
-                  <img src="{{renderData.1.3.event_image}}" alt=""/></a>
-                  <div class="">
-                    <span class="font-bold text-lg">{{renderData.1.3.event_title}}</span>
-                    <span class="block text-gray-500 text-sm">{{renderData.1.3.event_start}}</span>
-                  </div>
-                </div>
-              </card>
-              <card class="mt-4 p-3 w-80">
-                <div class="bg-white rounded overflow-hidden shadow-md">
-                  <a href="{{renderData.1.4.event_url}}" target="_blank">
-                  <img
-                    src="{{renderData.1.4.event_image}}"
-                  alt=""/></a>
-                  <div class="">
-                    <span class="font-bold text-lg">{{renderData.1.4.event_title}}</span>
-                    <span class="block text-gray-500 text-sm">{{renderData.1.4.event_start}}</span>
-                  </div>
-                </div>
-              </card>
-            </div>
-          </div>
+          </div>      
         </div>
       </div>
+    </article>
+    
+
+  <article class="col-span- lg:col-span-2 bg-white w-12/12 mt-10 rounded-lg pt-2 pb-6 p-3">
+    <div class="h-2 bg-indigo-400 rounded-t-md"></div>
+    <div class="flex items-center flex-col">
+      <h1 class="font-bold mt- pb-2 border-b border-gray-200 text-5xl">Upcoming Events</h1>
     </div>
-            
+    
+      <card class="mt-4 p-3 w-80">
+        <div class="bg-white rounded overflow-hidden shadow-md">
+          <a href="{{renderData.1.0.event_url}}" target="_blank">
+          <img
+            src="{{renderData.1.0.event_image}}"
+          alt=""/></a>
+          <div class="">
+            <span class="font-bold text-lg">{{renderData.1.0.event_title}}</span>
+            <span class="block text-gray-500 text-sm">{{renderData.1.0.event_start}}</span>
+          </div>
+        </div>
+      </card>
+      <card class="mt-4 p-3 w-80">
+        <div class="bg-white rounded overflow-hidden shadow-md">
+          <a href="{{renderData.1.1.event_url}}" target="_blank">
+          <img
+            src="{{renderData.1.1.event_image}}"
+          alt=""/></a>
+            <span class="font-bold text-lg">{{renderData.1.1.event_title}}</span>
+            <span class="block text-gray-500 text-sm">{{renderData.1.1.event_start}}</span>
+          </div>
+      </card>
+      <card class="mt-4 p-3 w-80">
+        <div class="bg-white rounded overflow-hidden shadow-md">
+          <a href="{{renderData.1.2.event_url}}" target="_blank">
+          <img
+            src="{{renderData.1.2.event_image}}" alt=""/></a>
+            <span class="font-bold text-lg">{{renderData.1.2.event_title}}</span>
+            <span class="block text-gray-500 text-sm">{{renderData.1.2.event_start}}</span>
+          </div>
+        </div>
+      </card>
+      <card class="mt-4 p-3 w-80">
+        <div class="bg-white rounded overflow-hidden shadow-md">
+          <a href="{{renderData.1.3.event_url}}" target="_blank">
+          <img src="{{renderData.1.3.event_image}}" alt=""/></a>
+          <div class="">
+            <span class="font-bold text-lg">{{renderData.1.3.event_title}}</span>
+            <span class="block text-gray-500 text-sm">{{renderData.1.3.event_start}}</span>
+          </div>
+        </div>
+      </card>
+      <card class="mt-4 p-3 w-80">
+        <div class="bg-white rounded overflow-hidden shadow-md">
+          <a href="{{renderData.1.4.event_url}}" target="_blank">
+          <img
+            src="{{renderData.1.4.event_image}}"
+          alt=""/></a>
+          <div class="">
+            <span class="font-bold text-lg">{{renderData.1.4.event_title}}</span>
+            <span class="block text-gray-500 text-sm">{{renderData.1.4.event_start}}</span>
+          </div>
+        </div>
+      </card>
+  </article>
         
+</div>
       
 
 
