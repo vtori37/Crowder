@@ -20,13 +20,6 @@ const loginFormHandler = async (event) => {
     if (response.ok) {
       document.location.replace('/dashboard');
     } else {
-<<<<<<< HEAD
-      alert('Failed to log in. Please try again.');
-      console.log('Failed to log in. Please try again.');
-    }
-  }
-}
-=======
       alert(response.statusText);
     };
   };
@@ -35,5 +28,4 @@ const loginFormHandler = async (event) => {
 
 
 document.querySelector('.form-login').addEventListener('submit', loginFormHandler);
->>>>>>> origin
 
