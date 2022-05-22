@@ -1,5 +1,6 @@
 const router = require('express').Router();
 const { User, Post, Comment, } = require('../../models');
+const withAuth = require('../../utils/auth')
 
 // get all users
 router.get('/', (req, res) => {
@@ -66,7 +67,7 @@ router.post('/', (req, res) => {
     })
 });
 
-router.post('/login', (req, res) => {
+router.post('/login', withAuth, (req, res) => {
   User.findOne({
     where: {
       email: req.body.email
@@ -78,31 +79,33 @@ router.post('/login', (req, res) => {
       return;
     }
     const validPassword = dbUserData.checkPassword(req.body.password);
+    
     if (!validPassword) {
       res.status(400).json({ message: 'Incorrect password!' });
       return;
-    } else {
-    // req.session.save(() => {
-    //   req.session.user_id = dbUserData.id;
-    //   req.session.username = dbUserData.username;
-    //   req.session.loggedIn = true;
-  
-    // });
-    res.json({ user: dbUserData, message: 'You are now logged in!' });
-    }
+    } 
+
+    req.session.save(() => {
+
+      req.session.user_id = dbUserData.id;
+      req.session.username = dbUserData.username;
+      req.session.loggedIn = true;
+      
+      res.json({ user: dbUserData, message: 'You are now logged in!' });
+    });
   });
 });
 
-// router.post('/logout', (req, res) => {
-//   if (req.session.loggedIn) {
-//     req.session.destroy(() => {
-//       res.status(204).end();
-//     });
-//   }
-//   else {
-//     res.status(404).end();
-//   }
-// });
+router.post('/logout', (req, res) => {
+  if (req.session.loggedIn) {
+    req.session.destroy(() => {
+      res.status(204).end();
+    });
+  }
+  else {
+    res.status(404).end();
+  }
+});
 
 router.put('/:id', (req, res) => {
   User.update(req.body, {

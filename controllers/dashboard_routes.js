@@ -3,24 +3,22 @@ const sequelize = require('../config/connection');
 const { User, Post, Event } = require('../models');
 const withAuth = require('../utils/auth');
 
-router.get('/', withAuth, (req, res) => {
-  // User.findOne({
-  //   where: {userId: req.session.userId}
-  // })
-  // .then(Post.findAll({
-  //   where: {userId: req.session.userId}
- // }))
+router.get('/',  withAuth, (req, res) => {
   Post.findAll({
     where: {user_id: req.session.userId},
     include: [User, Event]
   })
   .then(dbData => {
+    console.log(dbData);
     res.render('user_dashboard', {
     posts: dbData    
     })
   })
+  .catch(err => {
+    console.log(err);
+    res.status(500).json(err);
+  });
 });
-
 
 // dashboard attributed to user id
 router.get('/:id', (req, res) => {

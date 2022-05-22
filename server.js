@@ -14,7 +14,7 @@ const app = express();
 // set PORT
 const PORT = process.env.PORT || 3001;
 const sess = {
-  secret: "super duper secret",
+  secret: process.env.SESSION_SECRET,
   cookie: {},
   resave: false,
   saveUninitialized: true,

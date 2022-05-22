@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=, initial-scale=1.0">
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
-  <link rel="stylesheet" href="./assets/css/style.css" />
+  <link rel="stylesheet" href="/stylesheet/style.css" />
   <title>Crowder</title>
 </head>
 
@@ -34,7 +34,7 @@
         </li>
         <li class="mx-4">
           <!-- after setting up authentication, make dashboard href dynamic-->
-          <a href="/dashboard/1" class="text-xl hover:text-purple-500 duration-500 ">Dashboard</a>
+          <a href="/dashboard" class="text-xl hover:text-purple-500 duration-500 ">Dashboard</a>
         </li>
         <li class="mx-4">
           {{!#if loggedIn}}
@@ -63,11 +63,7 @@
   </footer>
   <!-- END FOOTER -->
 
-  <!-- BEGIN SCRIPTS -->
-  {{!#if loggedIn}}
-  <script src="./assets/javascripts/script.js"></script>
-  {{!/if}}
-  <!-- END SCRIPTS -->
+
 </body>
 
 </html>

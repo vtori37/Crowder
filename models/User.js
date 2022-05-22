@@ -19,6 +19,7 @@ User.init({
   username: {
     type: DataTypes.STRING,
     allowNull: false,
+    unique: true,
     // username should be at least 6 characters
     validate: {
       len: [6]
@@ -63,11 +64,11 @@ User.init({
 {
   hooks: {
     async beforeCreate(newUserData) {
-      newUserData.password = await bcrypt.hash(newUserData.password, 10);
+      newUserData.password = await bcrypt.hash(newUserData.password, 5);
       return newUserData;
     },
     async beforeUpdate(updatedUserData) {
-      updatedUserData.password = await bcrypt.hash(updatedUserData.password, 10);
+      updatedUserData.password = await bcrypt.hash(updatedUserData.password, 5);
       return updatedUserData;
     }
   },

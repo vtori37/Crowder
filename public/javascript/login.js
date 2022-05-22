@@ -7,6 +7,8 @@ function Menu(e) {
 const loginFormHandler = async (event) => {
   event.preventDefault();
 
+  
+  
   const email = document.querySelector('#email-login').value.trim();
   const password = document.querySelector('#password-login').value.trim();
 
@@ -17,11 +19,12 @@ const loginFormHandler = async (event) => {
       headers: {'Content-Type': 'application/json'}
     })
     if (response.ok) {
-      document.location.replace('/');
+      document.location.replace('/dashboard');
     } else {
       alert('Failed to log in. Please try again.');
     }
   }
 }
 
-document.querySelector('.form-login').addEventListener('submit', signupFormHandler);
+document.querySelector('.form-login').addEventListener('submit', loginFormHandler);
+
