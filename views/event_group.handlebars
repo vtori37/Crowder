@@ -34,7 +34,7 @@
 
 {{> post-content post}}
 
-{{!#if loggedIn}}
+{{#if loggedIn}}
 <form class="comment-form">
   <div>
     <textarea name="comment-content" placeholder="Type something..."></textarea>
@@ -48,7 +48,7 @@
 
 {{> comments post.comments}}
 
-{{!#if loggedIn}}
+{{#if loggedIn}}
 <script src="/javascript/comment.js"></script>
 {{/if}}
 
@@ -75,7 +75,7 @@
           </div>
 </section>
 
-{{!#if posts.length}}
+{{#if posts.length}}
 <section>
    <div class="items-center justify-center">
         <div class="bg-white h-70 mt-10 rounded-lg">
@@ -83,15 +83,15 @@
           <div class="flex items-center flex-col">
                 <h2>Your Posts</h2>
                 <ol>
-                  {{!#each posts as |post|}}
+                  {{#each posts as |post|}}
                   <li>
-                    {{!> post-content post}}
+                    {{> post-content post}}
                     <a href="/dashboard/edit/{{!post.id}}" class="edit-link">Edit post</a>
                   </li>
-                  {{!/each}}
+                  {{/each}}
                 </ol>
               </section>
-              {{!/if}}
+              {{/if}}
       </div>
       </div>
     </div>
