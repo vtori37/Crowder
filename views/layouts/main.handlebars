@@ -11,7 +11,6 @@
 </head>
 
 <body class="body-bg min-h-screen pt-12 md:pt-20 pb-6 px-2 md:px-0" style="font-family:'Lato',sans-serif;">
-
     <!-- BEGIN HEADER -->
   <header>
     <nav class="p-5 border-2 border-indigo-600 bg-white shadow md:flex md:items-center md:justify-between">
@@ -37,20 +36,20 @@
           <a href="/dashboard/1" class="text-xl hover:text-purple-500 duration-500 ">Dashboard</a>
         </li>
         <li class="mx-4">
-          {{!-- {{#if loggedIn}} --}}
+          {{#if loggedIn}}
           <button id="logout" class="btn-no-style text-xl hover:text-purple-500 duration-500 ">Logout</button>
         </li>
-        {{!-- {{else}}   --}}
+        {{else}}  
         <li class="mx-4">
           <a href="/login" class="text-xl hover:text-purple-500 duration-500 ">Sign up/Login</a>
-        {{!-- {{/if}} --}}
+        {{/if}}
         </li>
       </ul>
     </nav>
 
   </header>
   <!-- END HEADER -->
-
+  
   <!-- BEGIN MAIN -->
     <main class="flex-grow">
       {{{ body }}}   
@@ -58,15 +57,21 @@
   <!-- END MAIN -->
 
   <!-- BEGIN FOOTER -->
-  <footer class="">
-
+ <footer class="p-5 border-2 border-indigo-600 bg-white shadow md:flex md:items-center md:justify-between">
+    <div class="flex justify-between items-center">
+      <span class="text-2xl font-serif cursor-pointer">
+        <img class="h-10 inline"
+          src="https://st2.depositphotos.com/53723942/49047/v/380/depositphotos_490473196-stock-illustration-letter-wings-gradient-logo-vector.jpg?forcejpeg=true">
+        Crowder
+      </span>
+    </div>
   </footer>
   <!-- END FOOTER -->
 
   <!-- BEGIN SCRIPTS -->
-  {{!-- {{#if loggedIn}} --}}
+  {{#if loggedIn}}
   <script src="./assets/javascripts/script.js"></script>
-  {{!-- {{/if}} --}}
+  {{/if}}
   <!-- END SCRIPTS -->
 </body>
 

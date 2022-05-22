@@ -20,6 +20,7 @@ const loginFormHandler = async (event) => {
       document.location.replace('/');
     } else {
       alert('Failed to log in. Please try again.');
+      console.log('Failed to log in. Please try again.');
     }
   }
 }
