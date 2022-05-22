@@ -9,10 +9,7 @@ const hbs = exphbs.create(); // add { helpers }
 const session = require('express-session');
 const SequelizeStore = require('connect-session-sequelize')(session.Store);
 
-// initialize express server
-const app = express();
-// set PORT
-const PORT = process.env.PORT || 3001;
+
 const sess = {
   secret: process.env.SESSION_SECRET,
   cookie: {},
@@ -20,6 +17,10 @@ const sess = {
   saveUninitialized: true,
   store: new SequelizeStore({db: sequelize})
 };
+// initialize express server
+const app = express();
+// set PORT
+const PORT = process.env.PORT || 3001;
 
 // middleware
 app.engine('handlebars', hbs.engine);
@@ -27,7 +28,7 @@ app.set('view engine', 'handlebars');
 app.use(express.json());
 app.use(session(sess));
 app.use(express.urlencoded({ extended: false }));
-app.use(express.static(path.join(__dirname, '/public')));
+app.use(express.static(path.join(__dirname, 'public')));
 
 
 // eventually connect routes to server and turns on routes

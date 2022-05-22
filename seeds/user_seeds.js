@@ -17,7 +17,7 @@ userData = [
   {
     username: `${randomUser()}`,
     email: `${randomEmail()}`,
-    password: 'password',
+    password: 'password123',
     biography: ``,
     twitter: ``,
     user_img: `${randomImg()}`
@@ -25,7 +25,7 @@ userData = [
   {
     username: `${randomUser()}`,
     email: `${randomEmail()}`,
-    password: 'password',
+    password: 'password123',
     biography: ``,
     twitter: ``,
     user_img: `${randomImg()}`
@@ -33,7 +33,7 @@ userData = [
   {
     username: `${randomUser()}`,
     email: `${randomEmail()}`,
-    password: 'password',
+    password: 'password123',
     biography: ``,
     twitter: ``,
     user_img: `${randomImg()}`
@@ -41,7 +41,7 @@ userData = [
   {
     username: `${randomUser()}`,
     email: `${randomEmail()}`,
-    password: 'password',
+    password: 'password123',
     biography: ``,
     twitter: ``,
     user_img: `${randomImg()}`
@@ -49,7 +49,7 @@ userData = [
   {
     username: `${randomUser()}`,
     email: `${randomEmail()}`,
-    password: 'password',
+    password: 'password123',
     biography: ``,
     twitter: ``,
     user_img: `${randomImg()}`
@@ -57,7 +57,7 @@ userData = [
   {
     username: `${randomUser()}`,
     email: `${randomEmail()}`,
-    password: 'password',
+    password: 'password123',
     biography: ``,
     twitter: ``,
     user_img: `${randomImg()}`
@@ -65,7 +65,7 @@ userData = [
   {
     username: `${randomUser()}`,
     email: `${randomEmail()}`,
-    password: 'password',
+    password: 'password123',
     biography: ``,
     twitter: ``,
     user_img: `${randomImg()}`
@@ -73,7 +73,7 @@ userData = [
   {
     username: `${randomUser()}`,
     email: `${randomEmail()}`,
-    password: 'password',
+    password: 'password123',
     biography: ``,
     twitter: ``,
     user_img: `${randomImg()}`
@@ -81,7 +81,7 @@ userData = [
   {
     username: `${randomUser()}`,
     email: `${randomEmail()}`,
-    password: 'password',
+    password: 'password123',
     biography: ``,
     twitter: ``,
     user_img: `${randomImg()}`
@@ -89,7 +89,7 @@ userData = [
   {
     username: `${randomUser()}`,
     email: `${randomEmail()}`,
-    password: 'password',
+    password: 'password123',
     biography: ``,
     twitter: ``,
     user_img: `${randomImg()}`

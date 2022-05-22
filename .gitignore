@@ -7,7 +7,4 @@ node_modules/
 # environment variables
 .env
 
-# keeping incase we need it
-seeds/Forum.js
-seeds/forum_seeds.js
 
