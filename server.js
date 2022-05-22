@@ -24,6 +24,7 @@ app.set('view engine', 'handlebars');
 app.use(routes);
 
 
+
 // sync sequelize models to the db, initiate server
 sequelize.sync({ force: false }).then(() => {
   app.listen(PORT, () => {
