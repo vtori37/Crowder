@@ -18,7 +18,7 @@ router.get('/', (req, res) => {
   .then(dbEventData => {
     const events  = dbEventData.map(event => event.get({ plain: true }));
     res.render('landing_page', {
-      events
+      events, loggedIn: req.session.loggedIn
     });
   })
   .catch(err => {

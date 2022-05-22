@@ -37,17 +37,16 @@
           <a href="/dashboard" class="text-xl hover:text-purple-500 duration-500 ">Dashboard</a>
         </li>
         <li class="mx-4">
-          {{!#if loggedIn}}
+          {{#if loggedIn}}
           <button id="logout" class="btn-no-style text-xl hover:text-purple-500 duration-500 ">Logout</button>
         </li>
-        {{!else}}  
+        {{else}}  
         <li class="mx-4">
           <a href="/login" class="text-xl hover:text-purple-500 duration-500 ">Sign up/Login</a>
-        {{!/if}}
+        {{/if}}
         </li>
       </ul>
     </nav>
-
   </header>
   <!-- END HEADER -->
 
@@ -62,6 +61,10 @@
 
   </footer>
   <!-- END FOOTER -->
+
+  {{#if loggedIn}}
+  <script src="/javascript/logout.js"></script>
+  {{/if}}
 
   <script>function Menu(e) {
   let list = document.querySelector('ul');
