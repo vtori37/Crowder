@@ -1,31 +1,103 @@
-<section>
-  <h2>Create New Post</h2>
-
-  <form class="new-post-form">
     <div>
-      <label for="post-title">Title</label>
-      <input type="text" id="post-title" name="post-title" />
-    </div>
-    <div>
-      <label for="post-url">Link</label>
-      <input id="post-url" name="post-url" />
-    </div>
-    <button type="submit" class="btn">Create</button>
-  </form>
-</section>
+      <div class="flex items-center justify-center">
+        <div class="bg-white w-3/12 mt-10 rounded-lg">
+          <div class="h-2 bg-indigo-400 rounded-t-md"></div>
+          <div class="flex items-center justify-center pt-10 flex-col">
+            <img class="rounded-full w-32"
+              src="https://i.pinimg.com/236x/83/2a/46/832a460b522c84fa9650c11face5927e--headshot-photography-professional-portrait.jpg">
+            <h1 class="text-gray-800 font-semibold text-2xl mt-5">Maria Ramos</h1>
+            <h1 class="text-blue-500 text- p-4">@Maria_Ramos</h1>
+            <h1 class="text-gray-500 text-sm p-4 text-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+              sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</h1>
+          </div>
+          <div class="flex items-center justify-center mt-3 mb-6 flex-col">
+            <h1 class="text-base font-semibold">Get Connected</h1>
+            <div class="flex mt-2">
+              <img src="/public/images/facebook-16.png" alt="" class="w-6 border-2 p-1 rounded-full mr-3">
+              <img src="/public/images/linkedin-3-16.png" alt="" class="w-6 border-2 p-1 rounded-full mr-3">
+              <img src="/public/images/twitter-16.png" alt="" class="w-6 border-2 p-1 rounded-full mr-3">
+              <img src="/public/images/instagram-16.png" alt="" class="w-6 border-2 p-1 rounded-full mr-3">
+            </div>
+          </div>
+        </div>
 
-{{!#if posts.length}}
-<section>
-  <h2>Your Posts</h2>
-  <ol>
-    {{!#each posts as |post|}}
-    <li>
-      {{!> post-info post}}
-      <a href="/dashboard/edit/{{!post.id}}" class="edit-link">Edit post</a>
-    </li>
-    {{!/each}}
-  </ol>
-</section>
-{{!/if}}
+        <div class="flex items-center justify-center">
+          <div class="bg-white w-8/12 mt-10 rounded-lg">
+            <div class="h-2 bg-indigo-400 rounded-t-md"></div>
+            <div class="flex items-center flex-col">
+              <h1 class="font-bold mt- pb-2 border-b border-gray-200 text-5xl">Upcoming Events</h4>
+            </div>
+            <div class="flex items-center pt-2 pb-6 p-3">
+              <card class="mt-4 p-3 w-80">
+                <div class="bg-white rounded overflow-hidden shadow-md">
+                  <img
+                    src="https://webassets.inman.com/wp-content/uploads/2019/10/Untitled-design-2019-10-29T153346.079.jpg"
+                    alt="">
+                  <div class="">
+                    <span class="font-bold text-lg">Event Name</span>
+                    <span class="block text-gray-500 text-sm">Location</span>
+                  </div>
+                </div>
+              </card>
+              <card class="mt-4 p-3 w-80">
+                <div class="bg-white rounded overflow-hidden shadow-md">
+                  <img
+                    src="https://webassets.inman.com/wp-content/uploads/2019/10/Untitled-design-2019-10-29T153346.079.jpg"
+                    alt="">
+                  <div class="">
+                    <span class="font-bold text-lg">Event Name</span>
+                    <span class="block text-gray-500 text-sm">Location</span>
+                  </div>
+                </div>
+              </card>
+              <card class="mt-4 p-3 w-80">
+                <div class="bg-white rounded overflow-hidden shadow-md">
+                  <img
+                    src="https://webassets.inman.com/wp-content/uploads/2019/10/Untitled-design-2019-10-29T153346.079.jpg"
+                    alt="">
+                  <div class="">
+                    <span class="font-bold text-lg">Event Name</span>
+                    <span class="block text-gray-500 text-sm">Location</span>
+                  </div>
+                </div>
+              </card>
+              <card class="mt-4 p-3 w-80">
+                <div class="bg-white rounded overflow-hidden shadow-md">
+                  <img
+                    src="https://webassets.inman.com/wp-content/uploads/2019/10/Untitled-design-2019-10-29T153346.079.jpg"
+                    alt="">
+                  <div class="">
+                    <span class="font-bold text-lg">Event Name</span>
+                    <span class="block text-gray-500 text-sm">Location</span>
+                  </div>
+                </div>
+              </card>
+              <card class="mt-4 p-3 w-80">
+                <div class="bg-white rounded overflow-hidden shadow-md">
+                  <img
+                    src="https://webassets.inman.com/wp-content/uploads/2019/10/Untitled-design-2019-10-29T153346.079.jpg"
+                    alt="">
+                  <div class="">
+                    <span class="font-bold text-lg">Event Name</span>
+                    <span class="block text-gray-500 text-sm">Location</span>
+                  </div>
+                </div>
+              </card>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
-<script src="/javascript/add-post.js"></script>
+
+  <!-- BEGIN SCRIPTS WORK IN PROGRESS-->
+  <script src="./assets/js/mainScript.js"></script>
+  
+  <script>
+    function Menu(e) {
+      let list = document.querySelector('ul');
+
+      e.name === 'menu' ? (e.name = "close", list.classList.add('top-[80px]'), list.classList.add('opacity-100')) : (e.name = "menu", list.classList.remove('top-[80px]'), list.classList.remove('opacity-100'))
+    }
+  </script>
+  <!-- END SCRIPTS -->

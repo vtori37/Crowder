@@ -37,10 +37,13 @@
           <a href="/dashboard/1" class="text-xl hover:text-purple-500 duration-500 ">Dashboard</a>
         </li>
         <li class="mx-4">
-          <a href="/login" class="text-xl hover:text-purple-500 duration-500 ">Sign up/Login</a>
+          {{!-- {{#if loggedIn}} --}}
+          <button id="logout" class="btn-no-style text-xl hover:text-purple-500 duration-500 ">Logout</button>
         </li>
+        {{!-- {{else}}   --}}
         <li class="mx-4">
-          <a href="#" class="text-xl hover:text-purple-500 duration-500 ">Logout</a>
+          <a href="/login" class="text-xl hover:text-purple-500 duration-500 ">Sign up/Login</a>
+        {{!-- {{/if}} --}}
         </li>
       </ul>
     </nav>
@@ -61,7 +64,9 @@
   <!-- END FOOTER -->
 
   <!-- BEGIN SCRIPTS -->
+  {{!-- {{#if loggedIn}} --}}
   <script src="./assets/javascripts/script.js"></script>
+  {{!-- {{/if}} --}}
   <!-- END SCRIPTS -->
 </body>
 
