@@ -24,30 +24,24 @@
     </article>
     
 
-  <article class="col-span- lg:col-span-2 bg-white w-12/12 mt-10 rounded-lg pt-2 pb-6 p-3">
+  <article class="lg:col-span-2 bg-white w-12/12 mt-10 rounded-lg pt-2 pb-6 p-3">
     <div class="h-2 bg-indigo-400 rounded-t-md"></div>
     <div class="flex items-center flex-col">
       <h1 class="font-bold mt- pb-2 border-b border-gray-200 text-5xl">Upcoming Events</h1>
     </div>
-    
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6">
       <card class="mt-4 p-3 w-80">
         <div class="bg-white rounded overflow-hidden shadow-md">
           <a href="{{renderData.1.0.event_url}}" target="_blank">
-          <img
-            src="{{renderData.1.0.event_image}}"
-          alt=""/></a>
-          <div class="">
+          <img src="{{renderData.1.0.event_image}}" alt=""/></a>
             <span class="font-bold text-lg">{{renderData.1.0.event_title}}</span>
             <span class="block text-gray-500 text-sm">{{renderData.1.0.event_start}}</span>
-          </div>
         </div>
       </card>
       <card class="mt-4 p-3 w-80">
         <div class="bg-white rounded overflow-hidden shadow-md">
           <a href="{{renderData.1.1.event_url}}" target="_blank">
-          <img
-            src="{{renderData.1.1.event_image}}"
-          alt=""/></a>
+          <img src="{{renderData.1.1.event_image}}" alt=""/></a>
             <span class="font-bold text-lg">{{renderData.1.1.event_title}}</span>
             <span class="block text-gray-500 text-sm">{{renderData.1.1.event_start}}</span>
           </div>
@@ -55,11 +49,9 @@
       <card class="mt-4 p-3 w-80">
         <div class="bg-white rounded overflow-hidden shadow-md">
           <a href="{{renderData.1.2.event_url}}" target="_blank">
-          <img
-            src="{{renderData.1.2.event_image}}" alt=""/></a>
+          <img src="{{renderData.1.2.event_image}}" alt=""/></a>
             <span class="font-bold text-lg">{{renderData.1.2.event_title}}</span>
             <span class="block text-gray-500 text-sm">{{renderData.1.2.event_start}}</span>
-          </div>
         </div>
       </card>
       <card class="mt-4 p-3 w-80">
@@ -75,17 +67,15 @@
       <card class="mt-4 p-3 w-80">
         <div class="bg-white rounded overflow-hidden shadow-md">
           <a href="{{renderData.1.4.event_url}}" target="_blank">
-          <img
-            src="{{renderData.1.4.event_image}}"
-          alt=""/></a>
+          <img src="{{renderData.1.4.event_image}}" alt=""/></a>
           <div class="">
             <span class="font-bold text-lg">{{renderData.1.4.event_title}}</span>
             <span class="block text-gray-500 text-sm">{{renderData.1.4.event_start}}</span>
           </div>
         </div>
       </card>
+    </div>
   </article>
-        
 </div>
       
 
