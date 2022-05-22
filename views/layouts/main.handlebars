@@ -37,6 +37,10 @@
           <a href="/dashboard" class="text-xl hover:text-purple-500 duration-500 ">Dashboard</a>
         </li>
         <li class="mx-4">
+          <!-- after setting up authentication, make dashboard href dynamic-->
+          <a href="/events" class="text-xl hover:text-purple-500 duration-500 ">Events</a>
+        </li>
+        <li class="mx-4">
           {{#if loggedIn}}
           <button id="logout" class="btn-no-style text-xl hover:text-purple-500 duration-500 ">Logout</button>
         </li>
