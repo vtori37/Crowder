@@ -1,8 +1,9 @@
 const router =  require('express').Router();
 const { Post, Event } = require('../../models')
+const withAuth = require('../../utils/auth')
 
 // get all events
-router.get('/', (req, res) => {
+router.get('/', withAuth, (req, res) => {
   Event.findAll({
     attributes: ['id', 'event_title', 'event_summary', 'event_url', 'event_start', 'event_end', 'event_code'],
     include: [{
@@ -17,7 +18,7 @@ router.get('/', (req, res) => {
 });
 
 // get event by id
-router.get('/:id', (req, res) => {
+router.get('/:id', withAuth, (req, res) => {
   Event.findOne({
     where: {
       id: req.params.id
@@ -38,7 +39,7 @@ router.get('/:id', (req, res) => {
 })
 
 // post a new event
-router.post('/', (req, res) => {
+router.post('/', withAuth, (req, res) => {
   Event.create({
     event_title: req.body.event_title,
     event_summary: req.body.event_summary,
@@ -56,7 +57,7 @@ router.post('/', (req, res) => {
 
 
 // delete an event
-router.delete('/:id', (req, res) => {
+router.delete('/:id', withAuth, (req, res) => {
   Event.destroy({
     where: {
       id: req.params.id

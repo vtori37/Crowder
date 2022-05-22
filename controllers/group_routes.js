@@ -1,9 +1,9 @@
 const router = require('express').Router();
-const sequelize = require('../config/connection');
 const { User, Post, Comment, Event } = require('../models')
+const withAuth = require('../utils/auth');
 
 // see a group by id [return users, posts, comments, and events so that the post can be linked to an event]
-router.get('/:id', (req, res) => {
+router.get('/:id', withAuth, (req, res) => {
   // get post data with user & comment data included
   Post.findAll({
     where: {
@@ -21,6 +21,10 @@ router.get('/:id', (req, res) => {
         model: User,
         attributes: ['username']
       }
+    },
+    {
+      model: Event,
+      where: {id: req.params.id}
     }]
   })
   .then(dbPostData => {
@@ -45,7 +49,7 @@ router.get('/:id', (req, res) => {
 // })
 
 // edit a group post
-router.get('/edit/:id', (req, res) => {
+router.get('/edit/:id', withAuth, (req, res) => {
   Post.findByPk(req.params.id, {
     attributes: ['id', 'title', 'post_text'],
   })
@@ -64,7 +68,7 @@ router.get('/edit/:id', (req, res) => {
 
 
 // view a single post within a group
-router.get('/post/:id', (req, res) => {
+router.get('/post/:id', withAuth, (req, res) => {
   Post.findOne({
     where: {
       id: req.params.id
