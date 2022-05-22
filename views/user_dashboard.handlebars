@@ -27,7 +27,6 @@
               <h1 class="font-bold mt- pb-2 border-b border-gray-200 text-5xl">Upcoming Events</h1>
             </div>
           </div>
-          
             <div class="flex items-center pt-2 pb-6 p-3">
               <card class="mt-4 p-3 w-80">
                 <div class="bg-white rounded overflow-hidden shadow-md">
@@ -47,9 +46,10 @@
                   <img
                     src="{{renderData.1.1.event_image}}"
                   alt=""/></a>
+                  <div class="">
                     <span class="font-bold text-lg">{{renderData.1.1.event_title}}</span>
                     <span class="block text-gray-500 text-sm">{{renderData.1.1.event_start}}</span>
-                  </div>
+                  </div>  
                 </div>
               </card>
               <card class="mt-4 p-3 w-80">
@@ -57,6 +57,7 @@
                   <a href="{{renderData.1.2.event_url}}" target="_blank">
                   <img
                     src="{{renderData.1.2.event_image}}" alt=""/></a>
+                  <div class="">
                     <span class="font-bold text-lg">{{renderData.1.2.event_title}}</span>
                     <span class="block text-gray-500 text-sm">{{renderData.1.2.event_start}}</span>
                   </div>
@@ -88,14 +89,9 @@
           </div>
         </div>
       </div>
-    </div>
-            
-        
-      
+    
 
-
-  <!-- BEGIN SCRIPTS WORK IN PROGRESS-->
-  <script src="/javascript/dashboard.js"></script>
+ <script src="/javascript/dashboard.js"></script>
   
   <script>
     function Menu(e) {

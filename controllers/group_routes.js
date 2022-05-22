@@ -32,6 +32,7 @@ router.get('/:id', withAuth, (req, res) => {
       res.json(404).json({ message: 'No group found with this id!' });
     }
     const posts = dbPostData.map(posts => posts.get({plain:true}));
+
     res.render('event_group', { posts });
   })
   .catch(err => {
@@ -39,14 +40,6 @@ router.get('/:id', withAuth, (req, res) => {
     res.status(500).json(err);
   })
 });
-
-// create a group post
-// front end js
-// router.post('/group/post', (req, res) => {
-//   Post.create({
-
-//   })
-// })
 
 // edit a group post
 router.get('/edit/:id', withAuth, (req, res) => {
