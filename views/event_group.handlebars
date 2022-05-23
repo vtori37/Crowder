@@ -2,11 +2,11 @@
 <div class="w-full relative">
       <div class="w-full h-full"></div>
       <div class="w-full h-full flex flex-col absolute top-0 left-0 justify-center items-center z-30">
-        <div class="md:text-6xl font-bold text-white bg-black-300">Event Name</div>
+        <div class="md:text-6xl font-bold text-white bg-black-300">{{posts.0.Event.event_title}}</div>
 
       </div>
       <!-- Event Image -->
-      <img src="https://picsum.photos/id/390/2750/800" />
+      <img src="{{posts.0.Event.event_image}}" />
     </div>
     </div>
 
@@ -20,37 +20,21 @@
         <div class="bg-white h-70 mt-10 rounded-lg">
           <div class="h-2 bg-indigo-400 rounded-t-md"></div>
           <div class="flex items-center flex-col">
-            <h1 class="font-bold mt- pb-2 border-b border-gray-200 text-5xl">Comments</h4>
+            <h1 class="font-bold mt- pb-2 border-b border-gray-200 text-5xl">Posts</h4>
           </div>
           <div class="md:flex items-center justify-center pt-3 pb-8 px-3">
             <card class="px-3 max-w-sm">
-              <a class="text-blue-500 text-lg" href="./profile.html">@Maria_Ramos</a>
-              <p class="text-gray-500 ">"Hey everyone I was looking for a place to grab some food. Do y'all know if
-                there is anything close to the event"</p>
-            </card>
-            <card class="px-3 max-w-sm">
-              <p class="text-blue-500 text-lg">@Maria_Ramos</p>
-              <p class="text-gray-500 ">"Hey everyone I was looking for a place to grab some food. Do y'all know if
-                there is anything close to the event"</p>
-            </card>
-            <card class="px-3 max-w-sm">
-              <p class="text-blue-500 text-lg">@Maria_Ramos</p>
-              <p class="text-gray-500 ">"Hey everyone I was looking for a place to grab some food. Do y'all know if
-                there is anything close to the event"</p>
-            </card>
-            <card class="px-3 max-w-sm">
-              <p class="text-blue-500 text-lg">@Maria_Ramos</p>
-              <p class="text-gray-500 ">"Hey everyone I was looking for a place to grab some food. Do y'all know if
-                there is anything close to the event"</p>
+              <h2 class="text-blue-500 text-lg">{{posts.0.title}}</h2>
+              <p class="text-gray-500 ">{{posts.0.post_text}}</p>
             </card>
           </div>
         </div>
       </div>
     </article>
 
-{{> post-content post}}
+{{!> post-content post}}
 
-{{#if loggedIn}}
+{{!#if loggedIn}}
 <form class="comment-form">
   <div>
     <textarea name="comment-content" placeholder="Type something..."></textarea>
@@ -60,13 +44,13 @@
     <button type="submit" class="text-xl hover:text-purple-500 duration-500 ">Post comment</button>
   </div>
 </form>
-{{/if}}
+{{!/if}}
 
-{{> comments post.comments}}
+{{!> comments post.comments}}
 
-{{#if loggedIn}}
+{{!#if loggedIn}}
 <script src="/javascript/comment.js"></script>
-{{/if}}
+{{!/if}}
 
 
 <section>
@@ -104,11 +88,11 @@
                     {{!> post-content post}}
                     <a href="/dashboard/edit/{{!post.id}}" class="edit-link">Edit post</a>
                   </li>
-                  {{/each}}
+                  {{!/each}}
                 </ol>
               </section>
-              {{/if}}
+              {{!/if}}
       </div>
       </div>
     </div>
-<script src="/javascript/add-post.js"></script>
+<script src="/javascript/create_post.js"></script>

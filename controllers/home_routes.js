@@ -1,5 +1,4 @@
 const router = require('express').Router();
-const sequelize = require('../config/connection');
 const { Event, Post, Comment } = require('../models');
 
 // landing
@@ -18,7 +17,7 @@ router.get('/', (req, res) => {
   .then(dbEventData => {
     const events  = dbEventData.map(event => event.get({ plain: true }));
     res.render('landing_page', {
-      events
+      events, loggedIn: req.session.loggedIn
     });
   })
   .catch(err => {

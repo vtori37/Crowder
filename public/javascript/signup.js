@@ -16,6 +16,7 @@ const signupFormHandler = async (event) => {
       document.location.replace("/dashboard");
     } else {
       alert('Failed to signup. Try again.');
+      console.log('Failed to signup. Try again.');
     }
   }
 }
