@@ -40,32 +40,7 @@
     </div>
   </article>
 
-  {{!-- THIS IS AN OLD VERSION OF THE COMMENT SECTION
-  <article>
-    <div class="bg-white w-10/12 mt-10 rounded-lg ">
-      <div class="h-2 bg-indigo-400 rounded-t-md"></div>
-      {{!> post-content post}}
-        {{!#if loggedIn}}
-        <form class="comment-form">
-          <div class="flex items-center flex-col">
-            <h2 class="font-bold mt-4 pb-2 border-b border-gray-200 text-5xl">Post a Comment!</h2>
-          </div/>
-          <div class="grid grid-cols-1 lg:grid-cols-1 gap-4 lg:gap-8 xl:grid-cols-1 m-5"/>
-            <textarea class=""name="comment-content" placeholder="Type something..."></textarea>
-            <button type="submit" class=" py-2 px-4 border border-white-500 hover:border-transparent rounded text-xl hover:text-purple-500 duration-500 "> Post comment</button>
-          </div>
-        </form>
-        {{!/if}}
-
-        {{!> comments post.comments}}
-
-        {{!#if loggedIn}}
-        <script src="/javascript/comment.js"></script>
-        {{!/if}}      
-    </div>
-  </article> --}}
-    
-    
+  
   <article class="lg:col-span-2 bg-white w-12/12 mt-10 rounded-lg pb-2">
       <div class="h-2 bg-indigo-400 rounded-t-md"></div>
       <div class="flex items-center flex-col">
@@ -101,22 +76,7 @@
       </div>
               {{!/if}}
     </article>
-    {{!-- Post Form --}}
-    {{!-- THIS IS THE ORIGINAL POST SECTION;
-     <article class="lg:col-span-2 bg-white w-12/12 mt-10 rounded-lg pb-2">
-      <div class="bg-white w-10/12 mt-10 rounded-lg ">
-        <div class="h-2 bg-indigo-400 rounded-t-md"></div>
-        <h2 class="font-bold mt-4 pb-2 border-b border-gray-200 text-5xl">Create a Post!</h2>
-       <form class="new-post-form">
-          <div>
-              <label for="post-title">Title</label>
-              <input type="text" id="post-title" name="post-title" class="border-white-500" />
-              <input id="post-url" name="post-url" class="border-white-500" />
-              <button type="submit" class="text-xl hover:text-purple-500 duration-500">Create</button>
-          </div>
-        </form>
-      </div>
-    </article> --}}
+   
 </section>
 <script src="/javascript/create_post.js"></script>
 
