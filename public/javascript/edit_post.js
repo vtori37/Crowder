@@ -16,7 +16,23 @@ async function editFormHandler(event) {
   });
 
   if (response.ok) {
-    document.location.replace('/dashboard/');
+    //   if (response.ok) {
+  /* let currentUrl = "/group/"
+    switch(currentUrl) {
+      case "/group/0":
+        break;
+      case "/group/1":
+        break;
+      case "/group/2":
+        break;
+      case "/group/3":
+        break;
+      case "/group/4":
+        break;
+        default: "/"  
+    } */
+    document.location.reload();   
+    // document.location.replace(currentUrl);
   } else {
     alert(response.statusText);
   }

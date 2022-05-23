@@ -8,7 +8,7 @@ async function newFormHandler(event) {
     method: 'POST',
     body: JSON.stringify({
       title,
-      post_url
+      post_text
     }),
     headers: {
       'Content-Type': 'application/json'
@@ -16,7 +16,23 @@ async function newFormHandler(event) {
   });
 
   if (response.ok) {
-    document.location.replace('/dashboard');
+    /* let currentUrl = "/group/"
+      switch(currentUrl) {
+        case "/group/0":
+          break;
+        case "/group/1":
+          break;
+        case "/group/2":
+          break;
+        case "/group/3":
+          break;
+        case "/group/4":
+          break;
+          default: "/"  
+      } */
+      document.location.reload();   
+      // document.location.replace(currentUrl);
+    console.log("It Works")
   } else {
     alert(response.statusText);
   }
