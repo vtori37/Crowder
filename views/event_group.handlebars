@@ -1,98 +1,128 @@
 {{!-- for single posts --}}
-<div class="w-full relative">
-      <div class="w-full h-full"></div>
-      <div class="w-full h-full flex flex-col absolute top-0 left-0 justify-center items-center z-30">
-        <div class="md:text-6xl font-bold text-white bg-black-300">{{posts.0.Event.event_title}}</div>
-
-      </div>
+<div class="grid grid-cols-1 lg:grid-cols-2 lg:gap-4">
       <!-- Event Image -->
       <img src="{{posts.0.Event.event_image}}" />
-    </div>
-    </div>
+      <div class=" my-12 text-white bg-black-300">
+      <div class="md:text-5xl sm:text-6xlfont-bold text-white bg-black-300">{{posts.0.Event.event_title}}</div>
+        <p class="md:text-3xl sm:text-2xl">This is a group for individuals attending {{posts.0.Event.event_title}}. Feel free to post and connnect with others attending this event! </p>
+      </div>
+</div>
 
-    <div class="flex flex-inline bg-indigo-400 text-lg text-white shadow-md items-center justify-center">
-      <span>Attendies:</span>
+    {{!-- Attendees --}}
+   <div class="flex flex-inline bg-indigo-400 text-lg text-white shadow-md items-center justify-center">
+      <span>Attendees:</span>
       <p>5</p>
     </div>
 
-    <article class="">
-      <div class="items-center justify-center">
-        <div class="bg-white h-70 mt-10 rounded-lg">
-          <div class="h-2 bg-indigo-400 rounded-t-md"></div>
+<section class="grid grid-cols-1 lg:grid-cols-3 gap-4 lg:gap-0 m-5">
+  <article>
+    <div class="bg-white w-10/12 mt-10 rounded-lg ">
+      <div class="h-2 bg-indigo-400 rounded-t-md"></div>
+      {{!> post-content post}}
+        {{!#if loggedIn}}
+        <form class="new-post-form">
           <div class="flex items-center flex-col">
-            <h1 class="font-bold mt- pb-2 border-b border-gray-200 text-5xl">Posts</h4>
+            <h2 class="font-bold mt-4 pb-2 border-b border-gray-200 text-5xl">Create a Post!</h2>
+          </div/>
+          <div class="grid grid-cols-1 lg:grid-cols-1 gap-4 lg:gap-8 xl:grid-cols-1 m-5"/>
+            <input type="text" id="post-title" name="post-title" placeholder="Type post title here..." class="border-white-500" />
+            <textarea id="post-url" name="post-url" placeholder="Type something..."></textarea>
+            <button type="submit" class=" py-2 px-4 border border-white-500 hover:border-transparent rounded text-xl hover:text-purple-500 duration-500 ">Create Post</button>
           </div>
-          <div class="md:flex items-center justify-center pt-3 pb-8 px-3">
-            <card class="px-3 max-w-sm">
-              <h2 class="text-blue-500 text-lg">{{posts.0.title}}</h2>
-              <p class="text-gray-500 ">{{posts.0.post_text}}</p>
-            </card>
+        </form>
+        {{!/if}}
+
+        {{!> comments post.comments}}
+
+        {{!#if loggedIn}}
+        <script src="/javascript/comment.js"></script>
+        {{!/if}}      
+    </div>
+  </article>
+
+  {{!-- THIS IS AN OLD VERSION OF THE COMMENT SECTION
+  <article>
+    <div class="bg-white w-10/12 mt-10 rounded-lg ">
+      <div class="h-2 bg-indigo-400 rounded-t-md"></div>
+      {{!> post-content post}}
+        {{!#if loggedIn}}
+        <form class="comment-form">
+          <div class="flex items-center flex-col">
+            <h2 class="font-bold mt-4 pb-2 border-b border-gray-200 text-5xl">Post a Comment!</h2>
+          </div/>
+          <div class="grid grid-cols-1 lg:grid-cols-1 gap-4 lg:gap-8 xl:grid-cols-1 m-5"/>
+            <textarea class=""name="comment-content" placeholder="Type something..."></textarea>
+            <button type="submit" class=" py-2 px-4 border border-white-500 hover:border-transparent rounded text-xl hover:text-purple-500 duration-500 "> Post comment</button>
           </div>
-        </div>
+        </form>
+        {{!/if}}
+
+        {{!> comments post.comments}}
+
+        {{!#if loggedIn}}
+        <script src="/javascript/comment.js"></script>
+        {{!/if}}      
+    </div>
+  </article> --}}
+    
+    
+  <article class="lg:col-span-2 bg-white w-12/12 mt-10 rounded-lg pb-2">
+      <div class="h-2 bg-indigo-400 rounded-t-md"></div>
+      <div class="flex items-center flex-col">
+        <h2 class="font-bold mt- pb-2 border-b border-gray-200 text-5xl">Community Posts</h2>
       </div>
-    </article>
-
-{{!> post-content post}}
-
-{{!#if loggedIn}}
-<form class="comment-form">
-  <div>
-    <textarea name="comment-content" placeholder="Type something..."></textarea>
-  </div>
-
-  <div>
-    <button type="submit" class="text-xl hover:text-purple-500 duration-500 ">Post comment</button>
-  </div>
-</form>
-{{!/if}}
-
-{{!> comments post.comments}}
-
-{{!#if loggedIn}}
-<script src="/javascript/comment.js"></script>
-{{!/if}}
-
-
-<section>
-  <div class="items-center justify-center">
-        <div class="bg-white h-70 mt-10 rounded-lg">
-          <div class="h-2 bg-indigo-400 rounded-t-md"></div>
-          <div class="flex items-center flex-col">
-      <h3>Create New Post</h3>
-
-      <form class="new-post-form">
-        <div>
-          <label for="post-title">Title</label>
-          <input type="text" id="post-title" name="post-title" />
-        </div>
-        <div>
-          <input id="post-url" name="post-url" />
-        </div>
-        <button type="submit" class="text-xl hover:text-purple-500 duration-500">Create</button>
-      </form>
-          </div>
-          </div>
-          </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6">
+        
+        <card class="mt-4 p-3 w-80">
+            <h2 class="text-blue-500 text-lg">{{posts.0.title}}</h2>
+            <p class="text-gray-500 ">{{posts.0.post_text}}</p>
+        </card>
+      </div>
+  </article>
 </section>
 
-{{!#if posts.length}}
-<section>
-   <div class="items-center justify-center">
-        <div class="bg-white h-70 mt-10 rounded-lg">
-          <div class="h-2 bg-indigo-400 rounded-t-md"></div>
-          <div class="flex items-center flex-col">
-                <h2>Your Posts</h2>
-                <ol>
-                  {{!#each posts as |post|}}
-                  <li>
-                    {{!> post-content post}}
-                    <a href="/dashboard/edit/{{!post.id}}" class="edit-link">Edit post</a>
-                  </li>
-                  {{!/each}}
-                </ol>
-              </section>
+
+<section class="grid grid-cols-1 lg:grid-cols-1 gap-4 lg:gap-0 m-5">
+
+    {{!-- User's Posts --}}
+    {{!#if posts.length}}
+    <article class="lg:col-span-1 bg-white w-12/12 mt-10 rounded-lg pb-2">
+      <div class="h-2 bg-indigo-400 rounded-t-md"></div>
+      <div class="flex items-center flex-col">
+        <h2 class="font-bold mt-4 pb-2 border-b border-gray-200 text-5xl">Your Posts</h2>
+        <ol>
+          {{!#each posts as |post|}}
+          <li>
+            {{!> post-content post}}
+            <a href="/dashboard/edit/{{!post.id}}" class="edit-link">Edit post</a>
+          </li>
+          {{!/each}}
+        </ol>
+      </div>
               {{!/if}}
+    </article>
+    {{!-- Post Form --}}
+    {{!-- THIS IS THE ORIGINAL POST SECTION;
+     <article class="lg:col-span-2 bg-white w-12/12 mt-10 rounded-lg pb-2">
+      <div class="bg-white w-10/12 mt-10 rounded-lg ">
+        <div class="h-2 bg-indigo-400 rounded-t-md"></div>
+        <h2 class="font-bold mt-4 pb-2 border-b border-gray-200 text-5xl">Create a Post!</h2>
+       <form class="new-post-form">
+          <div>
+              <label for="post-title">Title</label>
+              <input type="text" id="post-title" name="post-title" class="border-white-500" />
+              <input id="post-url" name="post-url" class="border-white-500" />
+              <button type="submit" class="text-xl hover:text-purple-500 duration-500">Create</button>
+          </div>
+        </form>
       </div>
-      </div>
-    </div>
+    </article> --}}
+</section>
 <script src="/javascript/create_post.js"></script>
+
+
+
+
+
+
+ 
