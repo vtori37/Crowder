@@ -1,9 +1,10 @@
+
 {{!-- for single posts --}}
 <div class="grid grid-cols-1 lg:grid-cols-2 lg:gap-4">
       <!-- Event Image -->
       <img src="{{posts.0.Event.event_image}}" />
       <div class=" my-12 text-white bg-black-300">
-      <div class="md:text-5xl sm:text-6xlfont-bold text-white bg-black-300">{{posts.0.Event.event_title}}</div>
+      <div class="md:text-5xl sm:text-6xlfont-bold text-white bg-black-300 title">{{posts.0.Event.event_title}}</div>
         <p class="md:text-3xl sm:text-2xl">This is a group for individuals attending {{posts.0.Event.event_title}}. Feel free to post and connnect with others attending this event! </p>
       </div>
 </div>
@@ -14,71 +15,53 @@
       <p>5</p>
     </div>
 
-<section class="grid grid-cols-1 lg:grid-cols-3 gap-4 lg:gap-0 m-5">
-  <article>
-    <div class="bg-white w-10/12 mt-10 rounded-lg ">
-      <div class="h-2 bg-indigo-400 rounded-t-md"></div>
-      {{!> post-content post}}
-        {{!#if loggedIn}}
-        <form class="new-post-form">
-          <div class="flex items-center flex-col">
-            <h2 class="font-bold mt-4 pb-2 border-b border-gray-200 text-5xl">Create a Post!</h2>
-          </div/>
-          <div class="grid grid-cols-1 lg:grid-cols-1 gap-4 lg:gap-8 xl:grid-cols-1 m-5"/>
-            <input type="text" id="post-title" name="post-title" placeholder="Type post title here..." class="border-white-500" />
-            <textarea id="post-url" name="post-url" placeholder="Type something..."></textarea>
-            <button type="submit" class=" py-2 px-4 border border-white-500 hover:border-transparent rounded text-xl hover:text-purple-500 duration-500 ">Create Post</button>
-          </div>
-        </form>
-        {{!/if}}
-
-        {{!> comments post.comments}}
-
-        {{!#if loggedIn}}
-        <script src="/javascript/comment.js"></script>
-        {{!/if}}      
-    </div>
-  </article>
-
-  
   <article class="lg:col-span-2 bg-white w-12/12 mt-10 rounded-lg pb-2">
       <div class="h-2 bg-indigo-400 rounded-t-md"></div>
       <div class="flex items-center flex-col">
         <h2 class="font-bold mt- pb-2 border-b border-gray-200 text-5xl">Community Posts</h2>
       </div>
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6">
-        
+        {{#each posts as |post|}}
         <card class="mt-4 p-3 w-80">
-            <h2 class="text-blue-500 text-lg">{{posts.0.title}}</h2>
-            <p class="text-gray-500 ">{{posts.0.post_text}}</p>
+            <h2 class="text-blue-500 text-lg">{{this.title}}</h2>
+            <p class="text-gray-500 ">{{this.post_text}}</p>
         </card>
+        {{else}}
+        <h2>No Posts Yet!</h2>
+        {{/each}}
       </div>
   </article>
 </section>
 
-
-<section class="grid grid-cols-1 lg:grid-cols-1 gap-4 lg:gap-0 m-5">
-
-    {{!-- User's Posts --}}
-    {{!#if posts.length}}
-    <article class="lg:col-span-1 bg-white w-12/12 mt-10 rounded-lg pb-2">
+<section class="grid grid-cols-1 lg:grid-cols-3 gap-4 lg:gap-0 m-5">
+  <article>
+    <div class="bg-white w-10/12 mt-10 rounded-lg ">
       <div class="h-2 bg-indigo-400 rounded-t-md"></div>
-      <div class="flex items-center flex-col">
-        <h2 class="font-bold mt-4 pb-2 border-b border-gray-200 text-5xl">Your Posts</h2>
-        <ol>
-          {{!#each posts as |post|}}
-          <li>
-            {{!> post-content post}}
-            <a href="/dashboard/edit/{{!post.id}}" class="edit-link">Edit post</a>
-          </li>
-          {{!/each}}
-        </ol>
-      </div>
-              {{!/if}}
-    </article>
-   
-</section>
+      {{!> post-content post}}
+        {{!#if loggedIn}}
+        <form class="create-post-form">
+          <div class="flex items-center flex-col">
+            <h2 class="font-bold mt-4 pb-2 border-b border-gray-200 text-5xl">Create a Post!</h2>
+          </div>
+          <div class="grid grid-cols-1 lg:grid-cols-1 gap-4 lg:gap-8 xl:grid-cols-1 m-5"/>
+            <input type="text" id="post-title" name="post-title" placeholder="Type post title here..." class="border-white-500" />
+            <textarea id="post-text" name="post-text" placeholder="Type something..."></textarea>
+            <button type="submit" class=" py-2 px-4 border border-white-500 hover:border-transparent rounded text-xl hover:text-purple-500 duration-500 ">Create Post</button>
+          </div>
+       
+        </form>
+        {{!/if}}
+
+        {{!> comments post.comments}}
+
+        {{!#if loggedIn}}
+        {{!-- <script src="/javascript/comments.js"></script> --}}
+        {{!/if}}      
+    </div>
+  </article>
+
 <script src="/javascript/create_post.js"></script>
+
 
 
 
