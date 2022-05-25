@@ -10,12 +10,8 @@ async function newFormHandler(e) {
     method: 'POST',
     body: JSON.stringify({
       title,
-<<<<<<< HEAD
-      post_text
-=======
       post_text,
       event_id
->>>>>>> jamel
     }),
     headers: {
       'Content-Type': 'application/json'
@@ -23,27 +19,7 @@ async function newFormHandler(e) {
   });
 
   if (response.ok) {
-<<<<<<< HEAD
-    /* let currentUrl = "/group/"
-      switch(currentUrl) {
-        case "/group/0":
-          break;
-        case "/group/1":
-          break;
-        case "/group/2":
-          break;
-        case "/group/3":
-          break;
-        case "/group/4":
-          break;
-          default: "/"  
-      } */
-      document.location.reload();   
-      // document.location.replace(currentUrl);
-    console.log("It Works")
-=======
     document.location.replace(`/group/${event_id}`);
->>>>>>> jamel
   } else {
     alert(response.statusText);
   }
