@@ -32,8 +32,10 @@ router.get('/:id', withAuth, (req, res) => {
       res.json(404).json({ message: 'No group found with this id!' });
     }
     const posts = dbPostData.map(posts => posts.get({plain:true}));
+    console.log(posts)
 
-    res.render('event_group', { posts });
+    res.render('event_group', { posts,
+    loggedIn: req.session.loggedIn });
   })
   .catch(err => {
     console.log(err);

@@ -23,6 +23,7 @@ router.get('/', withAuth, (req, res) => {
     .then(dbEventData => {
       const events = dbEventData.map(events => events.get({plain:true}));
       renderData.push(events)
+      console.log(renderData);
       res.render('user_dashboard', {renderData, loggedIn: true})
     })
   })
