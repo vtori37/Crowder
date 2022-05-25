@@ -37,7 +37,7 @@
           <img src="{{this.event_image}}" alt=""/></a>
             <span class="font-bold text-lg">{{this.event_title}}</span>
             <span class="block text-gray-500 text-sm">{{this.event_start}}</span>
-            <button  type="button" onclick="window.location.href='http://localhost:3001/group/{{this.id}}'" class="bg-blue-400 px-2 border-2 text-white rounded container join-btn">Join Group</button>
+            <button  type="button" onclick="window.location.href='/group/{{this.id}}'" class="bg-blue-400 px-2 border-2 text-white rounded container join-btn">Join Group</button>
         </div>
       </card>
     {{/each}}
