@@ -43,27 +43,8 @@ router.get('/:id', withAuth, (req, res) => {
   })
 });
 
-// edit a group post
-router.get('/edit/:id', withAuth, (req, res) => {
-  Post.findByPk(req.params.id, {
-    attributes: ['id', 'title', 'post_text'],
-  })
-  .then(dbPostData => {
-    if (dbPostData) {
-      const post = dbPostData.get({plain:true});
-      res.render('edit_post', { post });
-    } else {
-      res.status(404).end();
-    }
-  })
-  .catch(err => {
-    res.status(500).json(err);
-  });
-});
-
-
-// view a single post within a group
-router.get('/post/:id', withAuth, (req, res) => {
+// view a single post
+router.get('/:id', withAuth, (req, res) => {
   Post.findOne({
     where: {
       id: req.params.id
@@ -73,7 +54,7 @@ router.get('/post/:id', withAuth, (req, res) => {
       'title',
       'post_text',
       'user_id',
-      'created_at',
+      'createdAt',
     ],
     include: [
       {
@@ -97,15 +78,12 @@ router.get('/post/:id', withAuth, (req, res) => {
     }
     const post = dbPostData.get({ plain: true });
     // pass data to template
-    res.render('single-user-post', {post});
+    res.render('single_user_post', {post});
   })
   .catch(err => {
     console.log(err);
     res.status(500).json(err);
   });
 });
-
-
-
 
 module.exports = router;

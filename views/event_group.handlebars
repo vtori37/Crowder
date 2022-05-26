@@ -14,6 +14,7 @@
       <span>Attendees:</span>
       <p>5</p>
     </div>
+  <a href="/dashboard"> &larr; Back to dashboard</a>
 
   <article class="lg:col-span-2 bg-white w-12/12 mt-10 rounded-lg pb-2">
       <div class="h-2 bg-indigo-400 rounded-t-md"></div>
@@ -23,8 +24,9 @@
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6">
         {{#each posts as |post|}}
         <card class="mt-4 p-3 w-80">
-            <h2 class="text-blue-500 text-lg">{{this.title}}</h2>
-            <p class="text-gray-500 ">{{this.post_text}}</p>
+            <h2 class="text-blue-500 text-lg"><a href="/post/{{id}}">{{title}}</a></h2>
+            <p class="text-gray-500 ">{{post_text}}</p>
+            by <b><i>{{user.username}}</i></b> on {{format_date created_at}} | <a href="/post/{{id}}">{{comments.length}} {{format_plural "comment" comments.length}}</a>
         </card>
         {{else}}
         <h2>No Posts Yet!</h2>
