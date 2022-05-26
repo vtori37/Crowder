@@ -2,32 +2,22 @@ async function deleteFormHandler(event) {
   event.preventDefault();
 
   const id = window.location.toString().split('/')[
-    window.location.toString().split('/').length - 1
-  ];
-  const response = await fetch(`/api/posts/${id}`, {
-    method: 'DELETE'
-  });
+    window.location.toString().split('/').length - 1];
 
-  if (response.ok) {
-  /* let currentUrl = "/group/"
-    switch(currentUrl) {
-      case "/group/0":
-        break;
-      case "/group/1":
-        break;
-      case "/group/2":
-        break;
-      case "/group/3":
-        break;
-      case "/group/4":
-        break;
-        default: "/"  
-    } */
-    document.location.reload();   
-    // document.location.replace(currentUrl);
-  } else {
-    alert(response.statusText);
+  const confirm = window.confirm('Are you sure you want to delete this post?');
+
+  if (confirm) {
+    const response = await fetch(`/api/posts/${id}`, {
+    method: 'DELETE'
+    })
+
+    if (response.ok) {
+      document.location.replace('/dashboard');   
+      alert('Post deleted!');
+    } else {
+      alert(response.statusText);
+    };
   }
 }
 
-document.querySelector('.delete-post-btn').addEventListener('click', deleteFormHandler);
+document.querySelector('.delete').addEventListener('click', deleteFormHandler);

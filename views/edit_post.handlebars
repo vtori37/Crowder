@@ -5,30 +5,16 @@
   </h2>
   <form class="edit-post-form">
     <div>
-      <input name="post-title" type="text" value="{{!post.title}}" />
-      <span>({{!format_url post.post_text}})</span>
+      <input name="post_title" type="text" value="{{post.title}}"/></br></br>
+      <input name="post_text" type="text" value="{{post.post_text}}">
     </div>
     <div>
-      {{!post.vote_count}} {{!format_plural "point" post.vote_count}} by you on {{!format_date post.created_at}}
-      |
-      <a href="/post/{{!post.id}}">{{!post.comments.length}} {{!format_plural "comment" post.comments.length}}</a>
+      by you on {{format_date post.createdAt}}
     </div>
-    <button type="submit">Save post</button>
-    <button type="button" class="delete-post-btn">Delete post</button>
+    <button type="submit">Save Post |</button>
+    <button type="button" class="delete">Delete Post</button>
   </form>
 </article>
 
-<form class="comment-form">
-  <div>
-    <textarea name="comment-body"></textarea>
-  </div>
-
-  <div>
-    <button type="submit">Add comment</button>
-  </div>
-</form>
-{{!> comments post.comments}}
-
-<script src="/javascript/edit-post.js"></script>
-<script src="/javascript/delete-post.js"></script>
-<script src="/javascript/comment.js"></script>
+<script src="/javascript/edit_post.js"></script>
+<script src="/javascript/delete_post.js"></script>

@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { User, Post, Event } = require('../models');
+const { User, Post, Event, Comment} = require('../models');
 const withAuth = require('../utils/auth');
 
 router.get('/', withAuth, (req, res) => {
@@ -9,6 +9,13 @@ router.get('/', withAuth, (req, res) => {
       {
         model: User,
         attributes: ['id', 'username', 'email', 'biography', 'user_img']
+      },
+      {
+        model: Event,
+        attributes: ['event_title']
+      },
+      {
+        model: Comment
       }
     ]
   })
@@ -29,6 +36,25 @@ router.get('/', withAuth, (req, res) => {
   })
   .catch(err => {
     console.log(err);
+    res.status(500).json(err);
+  });
+});
+
+// edit a post in the 'your posts' section
+router.get('/edit/:id', withAuth, (req, res) => {
+  Post.findByPk(req.params.id, {
+    attributes: ['id', 'title', 'post_text', 'createdAt'],
+  })
+  .then(dbPostData => {
+    if (dbPostData) {
+      const post = dbPostData.get({plain:true});
+      console.log(post)
+      res.render('edit_post', { post });
+    } else {
+      res.status(404).end();
+    }
+  })
+  .catch(err => {
     res.status(500).json(err);
   });
 });

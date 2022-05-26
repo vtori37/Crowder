@@ -33,9 +33,10 @@
         <div class="flex flex-col">
             {{#each renderData.[0] as |post|}}
               <card class="mt-4 p-3">
-                  <h2 class="text-blue-500 text-lg">{{this.title}}</h2>
-                  <p class="text-gray-500 ">{{this.post_text}}</p>
-                  <a href="/dashboard/edit/{{this.id}}" class="edit-link">Edit post</a>
+                  <h2 class="text-blue-500 text-lg"><a href="/post/{{id}}">{{title}}</a></h2>
+                  <p>by you on {{format_date createdAt}} in <i><a href="/group/{{event_id}}"><b>{{Event.event_title}}</b></a></i>
+                  </br><a href="/post/{{id}}">{{comments.length}} {{format_plural "comment" comments.length}}</a></p>
+                  <a href="/dashboard/edit/{{id}}" class="edit-link">Edit Post</a>
               </card>
             {{else}}
               <h2>No Posts Yet!</h2>
@@ -55,11 +56,11 @@
       {{#each renderData.[1] as |events|}}
         <card class="mt-4 ">
           <div class="bg-white rounded overflow-hidden shadow-md">
-            <a href="{{this.event_url}}" target="_blank">
-            <img src="{{this.event_image}}" alt=""/></a>
-              <span class="font-bold text-lg">{{this.event_title}}</span>
-              <span class="block text-gray-500 text-sm">{{this.event_start}}</span>
-              <button  type="button" onclick="window.location.href='/group/{{this.id}}'" class="bg-blue-400 px-2 border-2 text-white rounded container join-btn">Join Group</button>
+            <a href="{{event_url}}" target="_blank">
+            <img src="{{event_image}}" alt=""/></a>
+              <span class="font-bold text-lg">{{event_title}}</span>
+              <span class="block text-gray-500 text-sm">{{event_start}}</span>
+              <button  type="button" onclick="window.location.href='/group/{{id}}'" class="bg-blue-400 px-2 border-2 text-white rounded container join-btn">Join Group</button>
           </div>
         </card>
       {{/each}}
@@ -68,19 +69,12 @@
 
 </div>
 
-
-
-
-
- <script src="/javascript/dashboard.js"></script>
-
-  
-  <script>
-    function Menu(e) {
-      let list = document.querySelector('ul');
+<!-- START SCRIPTS -->
+<script>
+  function Menu(e) {
+    let list = document.querySelector('ul');
   }
-  </script>
-
+</script>
 <script>
 function Menu(e) {
 let list = document.querySelector('ul'); e.name === 'menu' ? (e.name = "close", list.classList.add('top-[80px]'), list.classList.add('opacity-100')) : (e.name = "menu", list.classList.remove('top-[80px]'), list.classList.remove('opacity-100'))
