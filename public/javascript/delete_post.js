@@ -9,7 +9,22 @@ async function deleteFormHandler(event) {
   });
 
   if (response.ok) {
-    document.location.replace('/dashboard');
+  /* let currentUrl = "/group/"
+    switch(currentUrl) {
+      case "/group/0":
+        break;
+      case "/group/1":
+        break;
+      case "/group/2":
+        break;
+      case "/group/3":
+        break;
+      case "/group/4":
+        break;
+        default: "/"  
+    } */
+    document.location.reload();   
+    // document.location.replace(currentUrl);
   } else {
     alert(response.statusText);
   }
