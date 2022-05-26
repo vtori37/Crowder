@@ -1,11 +1,10 @@
-<a href="/dashboard"> &larr; Back to dashboard</a>
-<div class="post">
+<a class="mx-10 p-3 border border-white-500 bg-purple-50 hover:border-transparent rounded text-xl hover:text-purple-500 duration-500" href="/dashboard"> &larr; Back to Dashboard</a>
+<div class="my-10 p-4 rounded bg-indigo-100 post">
   <div class="title">
-    <h2>{{title}}</h2>
+    <h2 class="text-2xl">{{title}}</h2>
     <p>{{post_text}}</p>
   </div>
   <p class="meta">
-  by <b><i>{{user.username}}</i></b> | <a href="/post/{{id}}">{{comments.length}} {{format_plural "comment" comments.length}}</a></p>
-  </br>
-</div>
-</article>
+    by <b><i>{{user.username}}</i></b> | <a href="/post/{{id}}">{{comments.length}} {{format_plural "comment" comments.length}}</a>
+  </p>
+  <br>

@@ -1,18 +1,19 @@
-{{> post-content post}}
-
-{{#if loggedIn}}
-<form class="comment-form">
-  <div>
-    <textarea name="comment-body" placeholder="Type something..."></textarea>
-  </div>
-  <div>
-    <button type="submit">Post Comment</button>
-    </br></br>
-  </div>
-</form>
-{{/if}}
+<div class="p-5 w-11/12 rounded-lg bg-white m-10 bg-white" {{> post-content post}}></div>
 
 {{> comments post.comments}}
+
+{{#if loggedIn}}
+  <article class="ml-10 mt-10  w-10/12 rounded-lg bg-white">
+    <div class="h-1 bg-indigo-400 rounded-t-md"></div>
+<form class="comment-form ml-10">
+    <textarea class="mx-6 my-3 w-8/12" name="comment-body" placeholder="Write your comment here..."></textarea>
+    <button class="ml-12 p-2 border bg-purple-50 hover:border-transparent rounded text-xl hover:text-purple-500 duration-500" type="submit">Post Comment</button>
+    <br>
+  </div>
+</form>
+</article>
+{{/if}}
+
 
 {{#if loggedIn}}
 <script src="/javascript/comments.js"></script>
