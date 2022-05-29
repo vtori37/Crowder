@@ -3,6 +3,14 @@ const { User, Post, Event, Comment} = require('../models');
 const withAuth = require('../utils/auth');
 
 router.get('/', withAuth, (req, res) => {
+  let renderData = [];
+  User.findAll({
+    where: {id: req.session.user_id},
+    attributes: ['id', 'username', 'email', 'biography', 'user_img']
+  })
+  .then(dbUserData => {
+    const user = dbUserData.map(user => user.get({plain:true}));
+    renderData.push(user)})
   Post.findAll({
     where: {user_id: req.session.user_id},
     include: [
@@ -17,13 +25,11 @@ router.get('/', withAuth, (req, res) => {
       {
         model: Comment
       }
-    ]
+    ],
   })
   .then(dbPostData => {
-    let renderData = [];
     const posts = dbPostData.map(posts => posts.get({plain:true}));
     renderData.push(posts)
-
     Event.findAll({
       attributes: ['id', 'event_title', 'event_start', 'event_image', 'event_url']
     })

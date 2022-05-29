@@ -1,45 +1,54 @@
-# Crowder
+# Crowder 
+
+![License: Unlicense](https://img.shields.io/badge/license-Unlicense-blue.svg)
+
 ## Description
-![Crowder](./Crowder-homepage.png)
-Crowder connects users to a group that has a shared interest in events.
-## Table of Contents 
-* [Website](#Website)
-* [Usage](#Usage)
-* [Contributors](#contributors)
-* [Technology](#technology)
-* [License](license)
-* [Questions](#Questions)
-
-***
-
-## Website
-Here is a link to the live website:
-[Crowder]( https://crowders.herokuapp.com/) 
+An Eventbrite/Facebook mashup that allows users to connect to forums populated with users that are attending the same event.
+## Table of Contents
+1. [Questions or Issues](#Questions)
+2. [Contribution](#Contribution)
+3. [Installation](#Installation)
+4. [Usage](#Usage)
+5. [Tests](#Tests)
+6. [Credits](#Credits)
+## Installation
+To install, follow the steps listed in this [video](https://github.com)!
 ## Usage
-Users should be able to set up an account and login. They can join a group for an event they will attend and create posts in that group. 
-## Contributors
-Jamel James
-Roy Velasquez
-Luis Valenscuela
-Victoria Rice
+To use, simply start the live server locally or visit the website as deployed on Heroku, [here](https://github.com)
+## Tests
+The jest framework was used for testing
+## Credits
+[Jamel James](https://github.com/jrj-sys), [Roy Velasquez](https://github.com/Roy4th), [Luis Valenzuela](https://github.com/Rinnnegone), & [Victoria Rice](https://github.com/vtori37)
+## Made With:
+HTML, CSS, Handlebars.js, Node.js, Express.js
+## Contribution 
+Issues can be created at any time [here](https://github.com/vtori37/Crowder/issues).
+## Questions
+Please reach out to the group via GitHub [issues](https://github.com/vtori37/Crowder/issues)!
+## License
+This is free and unencumbered software released into the public domain.
 
-## Technology
-* HTML5
-* CSS 
-* JS
-* Tailwind
-* Handlebars
+Anyone is free to copy, modify, publish, use, compile, sell, or
+distribute this software, either in source code form or as a compiled
+binary, for any purpose, commercial or non-commercial, and by any
+means.
 
-## License 
-https://opensource.org/licenses/MIT
+In jurisdictions that recognize copyright laws, the author or authors
+of this software dedicate any and all copyright interest in the
+software to the public domain. We make this dedication for the benefit
+of the public at large and to the detriment of our heirs and
+successors. We intend this dedication to be an overt act of
+relinquishment in perpetuity of all present and future rights to this
+software under copyright law.
 
-Copyright © <years> <copyright holder>
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
+IN NO EVENT SHALL THE AUTHORS BE LIABLE FOR ANY CLAIM, DAMAGES OR
+OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE,
+ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
+OTHER DEALINGS IN THE SOFTWARE.
 
-Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
-The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+For more information, please refer to <https://unlicense.org>
 
 
-
-<!-- ### Questions
-If you have any questions or concerns regarding this project -->
