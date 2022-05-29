@@ -3,27 +3,27 @@
 <div class="grid grid-cols-1 lg:grid-cols-2 lg:gap-4">
       <!-- Event Image -->
       <img src="{{posts.0.Event.event_image}}" />
-      <div class=" my-12 text-white bg-black-300">
-      <div class="md:text-3xl sm:text-6xl font-bold text-white bg-black-300 title">{{posts.0.Event.event_title}}</div>
-        <p class="md:text-3xl sm:text-2xl">This is a group for individuals attending {{posts.0.Event.event_title}}. Feel free to post and connnect with others attending this event! </p>
+      <div class="my-12 text-white bg-black-300 lg:grid-cols-2">
+      <div class="lg:text-4xl md:text-3xl sm:text-6xl font-bold text-white bg-black-300 title">{{posts.0.Event.event_title}}</div>
+        <p class="lg:text-4xl md:text-3xl sm:text-2xl">This is a group for individuals attending {{posts.0.Event.event_title}}. Feel free to post and connnect with others attending this event! </p>
       </div>
 </div>
 
     {{!-- Attendees --}}
-   <div class="flex flex-inline bg-indigo-400 text-lg text-white shadow-md items-center justify-center">
+   <div class="mb-7 flex flex-inline bg-indigo-400 text-lg text-white shadow-md items-center justify-center">
       <span>Attendees:</span>
       <p>5</p>
     </div>
-  <a href="/dashboard"> &larr; Back to dashboard</a>
+  <a class="mx-10 p-3 border border-white-500 bg-purple-50 hover:border-transparent rounded text-xl hover:text-purple-500 duration-500" href="/dashboard"> &larr; Back to dashboard</a>
 
-  <article class="lg:col-span-2 bg-white w-12/12 mt-10 rounded-lg pb-2">
+  <article class="lg:col-span-2 bg-white w-12/12 mt-7 rounded-lg pb-2 m-10 ">
       <div class="h-2 bg-indigo-400 rounded-t-md"></div>
       <div class="flex items-center flex-col">
-        <h2 class="font-bold mt- pb-2 border-b border-gray-200 text-5xl">Community Posts</h2>
+        <h2 class="font-bold mt-4 pb-2 border-b border-gray-200 text-5xl">Community Posts</h2>
       </div>
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
         {{#each posts as |post|}}
-        <card class="mt-4 p-3 w-80">
+        <card class="mt-4 p-3 mr-5 w-80 md:gap-4 lg:gap-4">
             <h2 class="text-blue-500 text-lg"><a href="/post/{{id}}">{{title}}</a></h2>
             <p class="text-gray-500 ">{{post_text}}</p>
             by <b><i>{{user.username}}</i></b> on {{format_date created_at}} | <a href="/post/{{id}}">{{comments.length}} {{format_plural "comment" comments.length}}</a>
@@ -37,18 +37,18 @@
 
 <section class="grid grid-cols-1 lg:grid-cols-3 gap-4 lg:gap-0 m-5">
   <article>
-    <div class="bg-white w-10/12 mt-10 rounded-lg ">
+    <div class="bg-white w-12/12 mt-5 rounded-lg m-5">
       <div class="h-2 bg-indigo-400 rounded-t-md"></div>
       {{!> post-content post}}
         {{!#if loggedIn}}
         <form class="create-post-form">
           <div class="flex items-center flex-col">
-            <h2 class="font-bold mt-4 pb-2 border-b border-gray-200 text-5xl">Create a Post!</h2>
+            <h2 class="font-bold mt-4 pb-2 border-b border-gray-200 md:text-4xl text-5xl">Create a Post!</h2>
           </div>
           <div class="grid grid-cols-1 lg:grid-cols-1 gap-4 lg:gap-8 xl:grid-cols-1 m-5"/>
             <input type="text" id="post-title" name="post-title" placeholder="Type post title here..." class="border-white-500" />
             <textarea id="post-text" name="post-text" placeholder="Type something..."></textarea>
-            <button type="submit" class=" py-2 px-4 border border-white-500 hover:border-transparent rounded text-xl hover:text-purple-500 duration-500 ">Create Post</button>
+            <button type="submit" class="py-2 px-4 mb-4 border border-white-500 hover:border-transparent rounded text-xl hover:text-purple-500 duration-500" >Create Post</button>
           </div>
        
         </form>
@@ -61,7 +61,7 @@
         {{!/if}}      
     </div>
   </article>
-
+</section>
 <script src="/javascript/create_post.js"></script>
 
 

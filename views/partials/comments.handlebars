@@ -1,12 +1,15 @@
-<div class="comments">
-  {{#each this}}
-  <section class="comment">
-    <div class="meta">
-      <b><i>{{user.username}}</i></b> on {{format_date created_at}}
-    </div>
-    <div class="text"> 
-      {{comment_text}}
-    </div>
-  </section>
-  {{/each}}
-</div>  
+  <article class="ml-10 w-4/12 rounded-lg bg-white">
+    <div class="h-1 bg-indigo-900 rounded-t-md"></div>
+  <div class="comments">
+    {{#each this}}
+    <section class="comment m-4 pb-4">
+      <div class="meta">
+        <b><i>{{user.username}}</i></b> on {{format_date created_at}}
+      </div>
+      <div class="text"> 
+        {{comment_text}}
+      </div>
+    </section>
+    {{/each}}
+  </div>  
+</article>
