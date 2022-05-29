@@ -17,7 +17,7 @@ To install, follow the steps listed in this [video](https://github.com)!
 ## Usage
 To use, simply start the live server locally or visit the website as deployed on Heroku, [here](https://github.com)
 ## Website
-Please click this link to deploy this application: (Crowder)[https://crowders.herokuapp.com/]
+Please click this link to deploy this application: [Crowder](https://crowders.herokuapp.com/)
 ## Tests
 The jest framework was used for testing
 ## Credits
