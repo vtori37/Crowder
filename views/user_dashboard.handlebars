@@ -8,10 +8,10 @@
             <div class="flex items-center justify-center pt-10 flex-col">
                <h2 class="font-bold mt-4 pb-2 border-b border-gray-200 text-5xl">Welcome!</h2>
               <img class="rounded-full w-32"
-                src="{{renderData.0.0.user.user_img}}">
-              <h1 class="text-gray-800 font-semibold text-2xl mt-5">{{renderData.0.0.user.username}}</h1>
-              <h1 class="text-blue-500 text- p-4">{{renderData.0.0.user.email}}</h1>
-              <h1 class="text-gray-500 text-sm p-4 text-center">{{renderData.0.0.user.biography}}</h1>
+                src="{{renderData.0.0.user_img}}">
+              <h1 class="text-gray-800 font-semibold text-2xl mt-5">{{renderData.0.0.username}}</h1>
+              <h1 class="text-blue-500 text- p-4">{{renderData.0.email}}</h1>
+              <h1 class="text-gray-500 text-sm p-4 text-center">{{renderData.0.0.biography}}</h1>
             </div>
             <div class="flex items-center justify-center mt-3 mb-6 flex-col">
               <div class="flex mt-2">
@@ -31,7 +31,7 @@
           <h2 class="font-bold mt-4 pb-2 border-b border-gray-200 text-5xl">Your Posts</h2>
         </div>
         <div class="flex flex-col ml-4 mt-3">
-            {{#each renderData.[0] as |post|}}
+            {{#each renderData.[1] as |post|}}
               <card class="mt-4 p-3">
                   <h2 class="text-blue-500 text-lg"><a href="/post/{{id}}">{{title}}</a></h2>
                   <p>by you on {{format_date createdAt}} in <i><a href="/group/{{event_id}}"><b>{{Event.event_title}}</b></a></i>
@@ -53,7 +53,7 @@
         <h1 class="font-bold mt- pb-2 border-b border-gray-200 text-5xl">Upcoming Events</h1>
       </div>
     <section class="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-6">
-      {{#each renderData.[1] as |events|}}
+      {{#each renderData.[2] as |events|}}
         <card class="mt-4 ">
           <div class="bg-white rounded overflow-hidden shadow-md">
             <a href="{{event_url}}" target="_blank">
