@@ -4,7 +4,8 @@ async function newFormHandler(e) {
   const title = document.querySelector('input[name="post-title"]').value;
   const post_text = document.querySelector('textarea').value;
   // slice at 28th index (end of URL) to get the event_id 
-  const event_id = document.URL.slice(28)
+  const event_id = window.location.toString().split('/')[
+    window.location.toString().split('/').length - 1];
 
   const response = await fetch(`/api/posts`, {
     method: 'POST',
