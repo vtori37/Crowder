@@ -17,7 +17,7 @@ An Eventbrite/Facebook mashup that allows users to connect to forums populated w
 ## Installation
 To install, follow the steps listed in this [video](https://github.com)!
 ## Usage
-To use, simply start the live server locally or visit the website as deployed on Heroku, [Crowder](https://crowderapp.herokuapp.com/)
+To use, simply start the live server locally or visit the website as deployed on Heroku, [here](https://github.com)!
 ## Tests
 The jest framework was used for testing.
 ## Credits
