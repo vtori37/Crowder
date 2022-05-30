@@ -4,6 +4,7 @@
 
 ## Description
 An Eventbrite/Facebook mashup that allows users to connect to forums populated with users that are attending the same event.
+
 ![Homepage](https://user-images.githubusercontent.com/95240889/170907850-4ce8d224-f499-4e57-9664-00fc0a9cfda5.png)
 
 ## Table of Contents
@@ -18,7 +19,7 @@ To install, follow the steps listed in this [video](https://github.com)!
 ## Usage
 To use, simply start the live server locally or visit the website as deployed on Heroku, [Crowder](https://crowderapp.herokuapp.com/)
 ## Tests
-The jest framework was used for testing
+The jest framework was used for testing.
 ## Credits
 [Jamel James](https://github.com/jrj-sys), [Roy Velasquez](https://github.com/Roy4th), [Luis Valenzuela](https://github.com/Rinnnegone), & [Victoria Rice](https://github.com/vtori37)
 ## Made With:
