@@ -4,13 +4,16 @@
 
 ## Description
 An Eventbrite/Facebook mashup that allows users to connect to forums populated with users that are attending the same event.
+
+![Homepage](https://user-images.githubusercontent.com/95240889/170907850-4ce8d224-f499-4e57-9664-00fc0a9cfda5.png)
+
 ## Table of Contents
 1. [Questions or Issues](#Questions)
 2. [Contribution](#Contribution)
 3. [Installation](#Installation)
 4. [Usage](#Usage)
-5. [Tests](#Tests)
-6. [Credits](#Credits)
+6. [Tests](#Tests)
+7. [Credits](#Credits)
 ## Installation
 To install, follow the steps listed in this [video](https://github.com)!
 ## Usage
