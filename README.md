@@ -14,9 +14,9 @@ An Eventbrite/Facebook mashup that allows users to connect to forums populated w
 ## Installation
 To install, follow the steps listed in this [video](https://github.com)!
 ## Usage
-To use, simply start the live server locally or visit the website as deployed on Heroku, [here](https://github.com)
+To use, simply start the live server locally or visit the website as deployed on Heroku, [here](https://github.com)!
 ## Tests
-The jest framework was used for testing
+The jest framework was used for testing.
 ## Credits
 [Jamel James](https://github.com/jrj-sys), [Roy Velasquez](https://github.com/Roy4th), [Luis Valenzuela](https://github.com/Rinnnegone), & [Victoria Rice](https://github.com/vtori37)
 ## Made With:
